@@ -1,0 +1,22 @@
+# Soc Ops
+
+Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
+
+## Prerequisites
+
+- [Node.js 22](https://nodejs.org/) or higher
+
+## Run
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+Deploys automatically to GitHub Pages on push to `main`.

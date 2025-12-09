@@ -1,0 +1,27 @@
+{
+  "name": "Soc-Ops React TypeScript",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vitest.explorer",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss"
+      ]
+    },
+    "codespaces": {
+      "openFiles": [
+        "src/App.tsx",
+        "README.md"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "openPreview"
+    }
+  }
+}

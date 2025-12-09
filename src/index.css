@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-accent: #2563eb;
+  --color-accent-light: #3b82f6;
+  --color-marked: #dcfce7;
+  --color-marked-border: #22c55e;
+  --color-bingo: #fbbf24;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
