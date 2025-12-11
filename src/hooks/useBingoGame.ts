@@ -32,27 +32,56 @@ interface StoredGameData {
   winningLine: BingoLine | null;
 }
 
-function validateStoredData(data: any): data is StoredGameData {
-  return (
-    data &&
-    typeof data === 'object' &&
-    data.version === STORAGE_VERSION &&
-    ['start', 'playing', 'bingo'].includes(data.gameState) &&
-    Array.isArray(data.board) &&
-    (data.board.length === 0 || data.board.length === 25) &&
-    data.board.every((sq: any) =>
-      sq &&
-      typeof sq.id === 'number' &&
-      typeof sq.text === 'string' &&
-      typeof sq.isMarked === 'boolean' &&
-      typeof sq.isFreeSpace === 'boolean'
-    ) &&
-    (data.winningLine === null ||
-      (typeof data.winningLine === 'object' &&
-        ['row', 'column', 'diagonal'].includes(data.winningLine.type) &&
-        typeof data.winningLine.index === 'number' &&
-        Array.isArray(data.winningLine.squares)))
-  );
+function validateStoredData(data: unknown): data is StoredGameData {
+  if (!data || typeof data !== 'object') {
+    return false;
+  }
+  
+  const obj = data as Record<string, unknown>;
+  
+  if (obj.version !== STORAGE_VERSION) {
+    return false;
+  }
+  
+  if (typeof obj.gameState !== 'string' || !['start', 'playing', 'bingo'].includes(obj.gameState)) {
+    return false;
+  }
+  
+  if (!Array.isArray(obj.board) || (obj.board.length !== 0 && obj.board.length !== 25)) {
+    return false;
+  }
+  
+  const validSquares = obj.board.every((sq: unknown) => {
+    if (!sq || typeof sq !== 'object') return false;
+    const square = sq as Record<string, unknown>;
+    return (
+      typeof square.id === 'number' &&
+      typeof square.text === 'string' &&
+      typeof square.isMarked === 'boolean' &&
+      typeof square.isFreeSpace === 'boolean'
+    );
+  });
+  
+  if (!validSquares) {
+    return false;
+  }
+  
+  if (obj.winningLine !== null) {
+    if (typeof obj.winningLine !== 'object') {
+      return false;
+    }
+    const line = obj.winningLine as Record<string, unknown>;
+    if (
+      typeof line.type !== 'string' ||
+      !['row', 'column', 'diagonal'].includes(line.type) ||
+      typeof line.index !== 'number' ||
+      !Array.isArray(line.squares)
+    ) {
+      return false;
+    }
+  }
+  
+  return true;
 }
 
 function loadGameState(): Pick<BingoGameState, 'gameState' | 'board' | 'winningLine'> | null {
@@ -139,20 +168,23 @@ export function useBingoGame(): BingoGameState & BingoGameActions {
   }, []);
 
   const handleSquareClick = useCallback((squareId: number) => {
-    setBoard((currentBoard) => toggleSquare(currentBoard, squareId));
-  }, []);
-
-  // Check for bingo after board changes
-  useEffect(() => {
-    if (board.length > 0 && !winningLine) {
-      const bingo = checkBingo(board);
-      if (bingo) {
-        setWinningLine(bingo);
-        setGameState('bingo');
-        setShowBingoModal(true);
+    setBoard((currentBoard) => {
+      const newBoard = toggleSquare(currentBoard, squareId);
+      
+      // Check for bingo after toggling
+      const bingo = checkBingo(newBoard);
+      if (bingo && !winningLine) {
+        // Schedule state updates to avoid synchronous setState in effect
+        queueMicrotask(() => {
+          setWinningLine(bingo);
+          setGameState('bingo');
+          setShowBingoModal(true);
+        });
       }
-    }
-  }, [board, winningLine]);
+      
+      return newBoard;
+    });
+  }, [winningLine]);
 
   const resetGame = useCallback(() => {
     setGameState('start');

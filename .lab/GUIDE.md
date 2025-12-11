@@ -25,9 +25,17 @@ https://github.com/microsoft/vscode-agent-lab-soc-ops
 	- Agent: `/prompt`
 3. 🎉 App is running and open in browser!
 
-Keep `.lab/GUIDE.md` open.
+Keep this `.lab/GUIDE.md` open (📌 Pin).
+
+## Recommendation
+
+1. Keep the live-updated browser open
+2. Commit working code often
+3. Revert unexpected changes using *Checkpoints* and *Undo* and try again (later)
 
 ## 1. Context engineering your repo
+
+Tour of the project.
 
 ### Task: Run and understand the /setup prompt
 
@@ -40,47 +48,47 @@ See `.github/prompts/setup.prompt.md`.
 **TL;DR:** Instructions guide all agentic codebase interactions, making them more efficient and reliable. Add them early, but make sure to keep them maintained and succinct.
 
 1. Command `Chat: Generate Workspace Instructions File`
-2. Review results, probably be too long
+   1. While agent analyzes the codebase, optionally start next task
+2. Review results, probably be too long and detailed
 3. Follow-up *“Compress down by half and add a mandatory development [ ] checklist (lint, build, test) to the top”*
 4. Commit instructions
 
 Result: All future requests will have basic map of the workspace.
 
-#### Task: Background agents
+### Task: Background agents
 
 **TL;DR:** Handoff tasks that don’t require handholding to background agents, which execute them isolated in git worktrees for quick parallel local iteration.
 
-1. Chat `+` > `New Background agent`:
-2. Background agent: *Add linting rules for unused vars and awaits usage; and fix any errors*
-3. Review and *Apply*, then right-click delete the sessions.
+1. Chat `+` > `New background agent` / `New cloud agent`:
+2. New Background agent: *Add linting rules for unused vars and awaits usage; and fix any errors*
+   1. Review and *Apply*, then right-click delete the sessions.
+3. New cloud agent: *Make the readme more engaging as landing page to the project*
 
 Result: Agents completed adjusted the rules, fixed errors, and all edits are merged back into main. Stricter linting rules will catch any human/agent mistakes earlier.
 
-### Instructions: Domain-specific
-
-#### Task: Check Tailwind 4 instructions
+### Task: Check Tailwind 4 instructions
 
 **TL;DR**: Tailwind v4 instructions close gaps from training data and document the latest best practices.
 
 See prompt in the footer.
 
-- Optional, if interested how it works: Delete main text and re-run the prompt
+**Optional**, if interested how it works: Delete main text and re-run the prompt
 
-#### Task: Check Frontend Instructions
+### Task: Check Frontend Instructions
 
 **Why it matters**: The “no purple gradients” instructions.
 
-Via Claude blog.
+Source: Claude blog, linked in the footer.
 
-Optional: What other agentic biases could you challenge and nudge?
+**Optional**: What other agentic biases could you challenge and nudge?
 
 ## 2. Design-first Frontend Vibing
 
-Now that we engineering the repo context, let's get creative.
+Now that we've engineered the repo context, let's get creative.
 
-#### Task: Make it yours
+### Task: Make it yours
 
-**TL;DR**: Plan mode to start off any bigger work items iterate on the plan (2+ times!) with tweaks and clarifications.
+**TL;DR**: Plan mode to start off any bigger work items—iterate on the plan (2+ times!) with tweaks and clarifications.
 
 Steps:
 1. Switch to Plan mode
@@ -118,33 +126,42 @@ Ideas:
 - Bold Serif Vintage
 - Toybox Primary Colors
 
-#### Task: Keep instructions updated
+### Task: Keep instructions updated
 
-**Why it matters**: Keep instructions updated with major architecture/design/dependency changes.
+**TL;DR**: Keep instructions updated with major architecture/design/dependency changes.
 
 1. Follow-up: `Add design section to copilot-instructions.md`
 2. Confirm, commit and push
-#### Task: A lot more redesign
 
-**Why it matters**: Explore more and learn faster with async cloud agents; a simple prompt powered by the GitHub MCP’s coding agent tools.
+### Task: A lot more redesign
 
-- New chat in Plan mode
+**TL;DR**: Scale exploration and learning with async cloud agents.
+
+- New Chat with Plan mode
 - `Redesign the start screen as more engaging landing page`
-- Notice: Lots of variations suggested in considerations
+- *Result*: Lots of variations suggested in considerations
 - Run the prompt: `/cloud-explore design variations`
+  - See `.github/prompts/cloud-explore.prompt.md`
+- Check Agent sessions for new 3 cloud agents appearing to track progress. Click to follow along or open agent in web.
+- LATER: Review the 3 designs, based on screenshots in PRs.
 
-Created 3 PRs for cloud agent, added to sessions. While cloud agent works, continue on …
+**Result:** 3 cloud agent sessions which will take a few minutes to complete. Meanwhile …
+
 ## 3. Quiz it up
 
-#### Task: Make the quiz yours
+### Task: Your own quiz master
 
-**Why it matters:** Define your own specialized workflows with custom agents, beyond generic coding prompts.
+**TL;DR:** Define your own specialized workflows with custom agents, beyond generic coding prompts. Works both locally and in cloud coding agent.
 
-Steps: Use a **Custom Agent** for quiz content.
-- Pick *Quiz Master*
+Steps:
+- New Chat, pick *Quiz Master* as custom agent
 - `Update questions to …` or just `Update quiz`
+- Check out the prompt in `.github/agents/quiz-master.agent.md`
+- Optional: Follow-up to nudge for more creativity, chaos, engagement.
+- `+` > `New cloud agent`: pick Quiz Master
+- Pick another theme and send
 
-Ideas:
+**Theme ideas**:
 - Skill Bingo: Instead of personal facts → workplace or technical skills.
 - Personality Bingo: Preferences, quirks, fun traits.
 - Secret Challenge Bingo: Each square has a quick micro-task with a person you meet.
@@ -163,37 +180,58 @@ Ideas:
 - Mystery Bingo: Guess who matches a trait and verify.
 - Chaos Bingo: Surprising, absurd, unpredictable prompts.
 
-#### Task: New Scavenger Hunt mode
+**Result:** Custom agent runs through the updated quiz, generating new creative and engaging questions.
 
-**Why it matters:** Custom agents like TDD can break workflows down into with users in control.
+## 4. Multi-Agent and Multi-Bingo
+
+### Task: New Scavenger Hunt mode, TDD-driven
+
+**TL;DR:** Custom agents with handoffs can break complex workflows down into smaller steps with users in control for critical decisions.
 
 Steps:
 - Start a new Plan agent
 - *Add a new Scavenger Hunt mode: same questions, but shown as simple list with checkboxes + progress meter.*
-- Iterate on plan for correctness …
-- Run TDD Red mode *Start*
+- Iterate on plan for correctness and completeness …
+- Run TDD Red mode *Start with tests*
 	- Review tests being written
+	- Check out VS Code's test runner
 - After TDD Red is done, pick TDD Green
 	- Review implementation and more tests passing
+- Check before and after/refactor
+    - Make sure it works, as TDD agent focuses on ONLY writing fully tested code
 - Work through hand offs, red - green - refactor.
 
 Bonus:
 - Reset to Checkpoint right before “TDD Red” starts, and retry with “TDD Supervisor”
 
-#### Extra Task: Card Deck Shuffle
+**Result:** Finely controlled TDD flow breaks tests down but allows you to review/confirm each critical step (tests, implementation, review).
+
+### Task: Card Deck Shuffle, Design-driven
+
+**TL;DR**: Break down agent workflows into specific focus areas, like design-first.
 
 Steps:
-1. Agent pick: `Pixel Jam`
+1. New chat with agent: `Pixel Jam`
+2. *New mode: Card Deck Shuffle. Every player opens the game → taps → gets a random card with a question.*
+3. Result: Agent iterates on the UI while keeping
+4. Follow up to make it work like you want:
+    - *Add left/right (fail, success)*
+    - *Draw a card right when I open it*
+5. Commit
 
-> New mode: Card Deck Shuffle. Every player opens the game → taps → gets a random card with a question.
+### Task: UX Review Agent 
 
-Follow up:
-> It should have swipe left/right (fail, success), and draw a card right when I open it
+**TL;DR**: Combine MCP, custom workflows, and subagent isolation in an agent for powerful workflows. Focus on different aspects, like usability, a11y, compliance.
 
-## Playwright UX Review
+- New chat with agent: `Pixel Jam`: *Run review*
+- Use Allow for this Workspace for Playwright tool approvals
+- Follow along as it reviews
+  - Aside: Open `.github/agents/pixel-jam.agent.md` to review the prompt
+- *Result*: Behold a mighty in-depth review
+- Bonus:
+  - File issues on GitHub
+  - Assign most critical issues to to coding agent to fix
 
-**TL;DR**: Combine MCP and custom workflows in an agent for . Focus on different aspects, like usability, a11y, compliance.
-- Multi-agent Exploration
+## Bonus
 
-- Allow all Playwright tools in this Workspace
-## Apply Redesign
+- Fix UX review problems, delegated to background or cloud agent
