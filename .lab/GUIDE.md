@@ -18,7 +18,7 @@ Harald Kirschner `@digitarald`
 https://github.com/microsoft/vscode-agent-lab-soc-ops
 
 1. GitHub:
-   1. *Use this template* > *Create a new repository* (pick your name)
+   1. *Use this template* > *Create a new repository* (pick `my-soc-ops`, make it public)
    2. Enable *Settings* > *Pages* > *Deploy from a branch* to *GitHub Actions*
 2. VS Code
 	- Install recommended extensions (notification or `Extensions: Show Recommended Extensions`)
