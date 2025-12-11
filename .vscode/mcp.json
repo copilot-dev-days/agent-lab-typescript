@@ -3,14 +3,11 @@
     "microsoft/playwright-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["@playwright/mcp@latest", "--browser=msedge"]
-    },
-    "github/github-mcp-server": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "X-MCP-Toolsets": "repos,issues,pull_requests,code_search,copilot,web_search"
-      }
+      "args": [
+        "@playwright/mcp@latest",
+        "--browser=msedge",
+        // "--headless=true"  // Run in faster headless mode
+      ]
     }
   }
 }

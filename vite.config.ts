@@ -5,7 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: process.env.NODE_ENV === 'production' ? '/soc-ops/' : '/',
+  // Auto-detect base path from environment (GitHub Actions sets VITE_REPO_NAME)
+  base: process.env.VITE_REPO_NAME ? `/${process.env.VITE_REPO_NAME}/` : '/',
   test: {
     globals: true,
     environment: 'jsdom',

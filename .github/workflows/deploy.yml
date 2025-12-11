@@ -29,7 +29,10 @@ jobs:
       
       - run: npm ci
       
-      - run: npm run build
+      - name: Build
+        run: npm run build
+        env:
+          VITE_REPO_NAME: ${{ github.event.repository.name }}
       
       - uses: actions/configure-pages@v4
       
