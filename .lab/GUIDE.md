@@ -16,7 +16,7 @@ Harald Kirschner `@digitarald`
 ## Setup
 
 
-1. Open https://github.com/microsoft/vscode-agent-lab-soc-ops
+1. Open https://github.com/copilot-dev-days/agent-lab-typescript
    1. *Use this template* > *Create a new repository* (pick `my-soc-ops`, make it *Public*)
       - ✅ Your own *soc-ops* GitHub repo is ready
    2. ⚠️ Enable *Settings* > *Pages* > *Deploy from a branch* to *GitHub Actions*
