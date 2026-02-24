@@ -122,3 +122,20 @@ footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--border
     .part-card { flex-direction: column; text-align: center; }
     .part-time { margin-top: 0.5rem; }
 }
+
+.hero-also {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.hero-also a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero-also a:hover {
+    color: var(--neon-magenta);
+    text-decoration: underline;
+}
