@@ -2,7 +2,7 @@
 
 Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
 
-📚 **[View Lab Guide](.lab/GUIDE.md)**
+📚 **[View Lab Guide](workshop/GUIDE.md)**
 
 ---
 
@@ -10,13 +10,13 @@ Social Bingo game for in-person mixers. Find people who match the questions and 
 
 | Part | Title |
 |------|-------|
-| [**00**](.lab/00-overview.md) | Overview & Checklist |
-| [**01**](.lab/01-setup.md) | Setup & Context Engineering |
-| [**02**](.lab/02-design.md) | Design-First Frontend |
-| [**03**](.lab/03-quiz-master.md) | Custom Quiz Master |
-| [**04**](.lab/04-multi-agent.md) | Multi-Agent Development |
+| [**00**](workshop/00-overview.md) | Overview & Checklist |
+| [**01**](workshop/01-setup.md) | Setup & Context Engineering |
+| [**02**](workshop/02-design.md) | Design-First Frontend |
+| [**03**](workshop/03-quiz-master.md) | Custom Quiz Master |
+| [**04**](workshop/04-multi-agent.md) | Multi-Agent Development |
 
-> 📝 Lab guides are also available in the [`.lab/`](.lab/) folder for offline reading.
+> 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
 
 ---
 

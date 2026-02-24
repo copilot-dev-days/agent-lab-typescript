@@ -45,7 +45,7 @@ The agent will figure out any required installation steps.
 
 ✅ **Success:** App is running and open in browser!
 
-Keep this `.lab/` guide open (📌 Pin).
+Keep this `workshop/` guide open (📌 Pin).
 
 ---
 
