@@ -32,10 +32,17 @@
 ## 🚀 Quick Setup
 
 ```
+# Option A (recommended for full lab with publishing):
 # 1. Use template at github.com/copilot-dev-days/agent-lab-typescript
 # 2. Enable GitHub Pages (Settings > Pages > GitHub Actions)
 # 3. Clone in VS Code
-# 4. Run /setup in Chat
+#
+# Option B (quick start, no template/fork required):
+# 1. Open in Codespaces:
+#    https://github.com/codespaces/new/copilot-dev-days/agent-lab-typescript
+#
+# Then run:
+# /setup
 ```
 
 ---

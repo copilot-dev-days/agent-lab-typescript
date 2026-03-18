@@ -12,7 +12,9 @@ In this section, you'll set up your development environment and teach GitHub Cop
 
 ## 🔧 Initial Setup
 
-### Step 1: Create Your Repository
+### Step 1: Pick a Setup Path
+
+#### Option A (recommended): Create Your Repository
 
 1. Open [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript)
 2. Click **Use this template** → **Create a new repository**
@@ -20,7 +22,15 @@ In this section, you'll set up your development environment and teach GitHub Cop
    - Visibility: **Public**
 3. ✅ Your own Soc Ops repo is ready!
 
+#### Option B: Open directly in Codespaces (no template/fork)
+
+1. Open [codespaces/new/copilot-dev-days/agent-lab-typescript](https://github.com/codespaces/new/copilot-dev-days/agent-lab-typescript)
+2. Create a new Codespace
+3. ✅ Environment starts with the repository devcontainer automatically.
+
 ### Step 2: Enable GitHub Pages
+
+If you used **Option A**, continue with this step.
 
 1. Go to your repo's **Settings** → **Pages**
 2. Under "Build and deployment", change *Deploy from a branch* to **GitHub Actions**
@@ -28,10 +38,14 @@ In this section, you'll set up your development environment and teach GitHub Cop
 
 ### Step 3: Clone & Open in VS Code
 
+If you used **Option A**, do this step.
+
 1. Open VS Code
 2. Run command: `Git: Clone` → `Clone from GitHub`
 3. Select your new repository
 4. Install recommended extensions (notification or `Extensions: Show Recommended Extensions`)
+
+If you used **Option B**, skip clone and use your active Codespace session.
 
 ### Step 4: Run the Setup Agent
 
