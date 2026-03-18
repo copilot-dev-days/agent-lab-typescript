@@ -12,9 +12,7 @@ In this section, you'll set up your development environment and teach GitHub Cop
 
 ## 🔧 Initial Setup
 
-### Step 1: Pick a Setup Path
-
-#### Option A (recommended): Create Your Repository
+### Step 1: Create Your Repository (Required)
 
 1. Open [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript)
 2. Click **Use this template** → **Create a new repository**
@@ -22,30 +20,26 @@ In this section, you'll set up your development environment and teach GitHub Cop
    - Visibility: **Public**
 3. ✅ Your own Soc Ops repo is ready!
 
-#### Option B: Open directly in Codespaces (no template or fork)
-
-1. Open [codespaces/new/copilot-dev-days/agent-lab-typescript](https://github.com/codespaces/new/copilot-dev-days/agent-lab-typescript)
-2. Create a new Codespace
-3. ✅ Environment starts with the repository devcontainer automatically.
-
-> ⚠️ If you want to deploy to **GitHub Pages**, create your own repository first using **Option A**.
-
 ### Step 2: Enable GitHub Pages
-
-If you used **Option A**, continue with this step.
 
 1. Go to your repo's **Settings** → **Pages**
 2. Under "Build and deployment", change *Deploy from a branch* to **GitHub Actions**
 3. ✅ Any commit will now publish to: `https://{username}.github.io/{repo-name}`
 
-### Step 3 (Option A only): Clone & Open in VS Code
+### Step 3: Choose How You'll Develop
+
+#### Option A: Clone locally in VS Code
 
 1. Open VS Code
 2. Run command: `Git: Clone` → `Clone from GitHub`
 3. Select your new repository
 4. Install recommended extensions (notification or `Extensions: Show Recommended Extensions`)
 
-If you used **Option B**, skip clone and use your active Codespace session.
+#### Option B: Create a Codespace for your repo
+
+1. Open your repository on GitHub
+2. Click **Code** → **Codespaces** → **Create codespace on main**
+3. ✅ Codespace starts with your repo and devcontainer.
 
 ### Step 4: Run the Setup Agent
 

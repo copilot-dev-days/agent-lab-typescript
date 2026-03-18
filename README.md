@@ -3,7 +3,7 @@
 Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
 
 📚 **[View Lab Guide](workshop/GUIDE.md)**
-💻 **[Open in GitHub Codespaces](https://github.com/codespaces/new/copilot-dev-days/agent-lab-typescript)**
+🚀 **[Start with setup flow](workshop/01-setup.md)** (create your own repo first)
 
 ---
 
@@ -29,9 +29,9 @@ Social Bingo game for in-person mixers. Find people who match the questions and 
 
 This repo already includes a `.devcontainer/devcontainer.json`.
 
-- **GitHub Codespaces:** open the repository in Codespaces (link above) and it will use the devcontainer automatically.
+- **GitHub Codespaces:** create a Codespace from **your own repository** and it will use the devcontainer automatically.
 - **VS Code Dev Containers:** clone locally, then run `Dev Containers: Reopen in Container`.
-- **GitHub Pages publishing:** create your own repository from the template first; Pages deployment is intended for your repo.
+- **GitHub Pages publishing:** deployment is configured for your own repository.
 
 ## Run
 

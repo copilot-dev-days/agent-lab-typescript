@@ -32,16 +32,14 @@
 ## 🚀 Quick Setup
 
 ```
-# Option A (recommended if you want to publish to GitHub Pages):
-# 1. Use template at github.com/copilot-dev-days/agent-lab-typescript
-# 2. Enable GitHub Pages (Settings > Pages > GitHub Actions)
-# 3. Clone in VS Code
+# 1. Create your repo from template:
+#    github.com/copilot-dev-days/agent-lab-typescript
+# 2. Enable GitHub Pages:
+#    Settings > Pages > GitHub Actions
 #
-# Option B (quick start, no template/fork required):
-# 1. Open in Codespaces:
-#    https://github.com/codespaces/new/copilot-dev-days/agent-lab-typescript
-#
-# Note: For GitHub Pages publishing, use Option A and create your own repo first.
+# Then choose one:
+# A) Clone your repo in VS Code
+# B) Create a Codespace from your repo (Code > Codespaces)
 #
 # Then run:
 # /setup
