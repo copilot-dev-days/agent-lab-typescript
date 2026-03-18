@@ -63,7 +63,7 @@ Keep instructions updated with major architecture/design/dependency changes.
 1. Follow-up: `Add design guide section to copilot-instructions.md`
 2. Confirm, commit and push
 
-Bonus: Check that GitHub Pages is updating (if you created your own repo in Part 1 Option A).
+Bonus: Check that GitHub Pages is updating.
 
 ---
 
