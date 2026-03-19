@@ -214,6 +214,7 @@
             textarea.style.left = '-9999px';
             document.body.appendChild(textarea);
             textarea.select();
+            // Keep the deprecated fallback for older browsers that lack navigator.clipboard.
             const copied = document.execCommand('copy');
             document.body.removeChild(textarea);
             if (!copied) throw new Error('Fallback copy failed');
@@ -238,7 +239,7 @@
                 const liveRegion = document.createElement('span');
                 liveRegion.className = 'sr-only';
                 liveRegion.setAttribute('aria-live', 'polite');
-                let resetTimer;
+                let resetTimer = null;
 
                 const resetButtonState = () => {
                     copyButton.textContent = 'Copy';
@@ -265,6 +266,7 @@
 
                     resetTimer = setTimeout(() => {
                         pendingCopyResetTimers.delete(resetTimer);
+                        resetTimer = null;
                         resetButtonState();
                     }, COPY_STATUS_RESET_DELAY);
                     pendingCopyResetTimers.add(resetTimer);
