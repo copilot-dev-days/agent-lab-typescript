@@ -81,6 +81,7 @@
 
         const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/copilot-dev-days/agent-lab-typescript/main/workshop/';
         const CHECKBOX_STATE_KEY_PREFIX = 'workshop-checkboxes:';
+        const COPY_STATUS_RESET_DELAY = 2000;
         const pendingCopyResetTimers = new Set();
 
         function getCurrentStepId() {
@@ -237,13 +238,13 @@
                 const liveRegion = document.createElement('span');
                 liveRegion.className = 'sr-only';
                 liveRegion.setAttribute('aria-live', 'polite');
+                let resetTimer;
 
                 const resetButtonState = () => {
                     copyButton.textContent = 'Copy';
                     copyButton.dataset.state = 'idle';
                     liveRegion.textContent = '';
                 };
-                let resetTimer;
 
                 copyButton.addEventListener('click', async () => {
                     if (resetTimer) {
@@ -265,7 +266,7 @@
                     resetTimer = setTimeout(() => {
                         pendingCopyResetTimers.delete(resetTimer);
                         resetButtonState();
-                    }, 2000);
+                    }, COPY_STATUS_RESET_DELAY);
                     pendingCopyResetTimers.add(resetTimer);
                 });
 
