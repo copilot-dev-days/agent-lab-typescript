@@ -60,28 +60,24 @@ Keep instructions updated with major architecture/design/dependency changes.
 
 **Steps:**
 
-1. Follow-up: `Add design guide section to copilot-instructions.md`
+1. Follow-up: `/create-instructions design guide`
 2. Confirm, commit and push
 
 Bonus: Check that GitHub Pages is updating.
 
 ---
 
-### Task 3: A Lot More Redesign
+### Task 3: Dogfood the Redesign
 
-Scale exploration and learning with async cloud agents.
+Re-run the dogfooding skill from Part 1 to validate your new design.
 
 **Steps:**
 
-1. New Chat with Plan mode
-2. `Redesign the start screen as more engaging landing page`
-3. *Result*: Lots of variations suggested in considerations
-4. Run the prompt: `/cloud-explore design variations`
-   - See `.github/prompts/cloud-explore.prompt.md`
-5. Check Agent sessions for 3 new cloud agents appearing to track progress. Click to follow along or open agent in web.
-6. LATER: Review the 3 designs, based on screenshots in PRs.
+1. Prompt: *"Dogfood the app — focus on the new design"*
+2. Compare feedback to the earlier dogfooding report
+3. Optional: Address any issues the agent flags
 
-✅ **Result:** 3 cloud agent sessions which will take a few minutes to complete. Meanwhile …
+✅ **Result:** The agent plays through the redesigned app and gives fresh critical feedback.
 
 ---
 
@@ -91,4 +87,4 @@ You've learned how to:
 - Use Plan Mode for complex design tasks
 - Iterate on plans before implementing
 - Keep instructions updated with changes
-- Scale exploration with parallel cloud agents
+- Re-run dogfooding to validate design changes

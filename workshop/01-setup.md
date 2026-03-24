@@ -14,7 +14,7 @@ In this section, you'll set up your development environment and teach GitHub Cop
 
 ### Step 1: Create Your Repository (Required)
 
-1. Open [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript)
+1. Open [github.com/microsoft/vscode-agent-lab-soc-ops](https://github.com/microsoft/vscode-agent-lab-soc-ops)
 2. Click **Use this template** → **Create a new repository**
    - Name: `my-bingo-mixer`
    - Visibility: **Public**
@@ -49,7 +49,9 @@ In the Chat panel:
 /setup
 ```
 
-The agent will figure out any required installation steps.
+On the first terminal tool, enable *Auto*-*Approve*.
+
+Let the agent figure out any required installation steps.
 
 ✅ **Success:** App is running and open in browser!
 
@@ -67,7 +69,7 @@ Instructions guide all agentic codebase interactions, making them more efficient
 
 **Steps:**
 
-1. Run command: `Chat: Generate Workspace Instructions File`
+1. Run prompt: `/init`
    - While agent analyzes the codebase, optionally start next task
 2. Review results — probably too long and detailed
 3. Follow-up: *"Compress down by half and add a mandatory development [ ] checklist (lint, build, test) to the top"*
@@ -77,32 +79,35 @@ Instructions guide all agentic codebase interactions, making them more efficient
 
 ---
 
-### Task 2: Background Agents
-
-Handoff tasks that don't require handholding to background agents, which execute them isolated in git worktrees for quick parallel local iteration.
+### Task 2: Dogfooding & Custom Skills
 
 **Steps:**
 
-1. Chat `+` → `New background agent` / `New cloud agent`
-2. New Background agent: *Add linting rules for unused vars and awaits usage; and fix any errors*
-   - Review and *Apply*, then right-click delete the session
-3. New cloud agent: *Make the readme more engaging as landing page to the project*
+1. Prompt: *"Test the app like a critical dogfooder, giving critical feedback on how fun it is"*
+2. Watch how the agent launches the built-in browser, interacts with the app, and writes a report
+3. `/create-skill` *for dogfooding* — or: *"Save this as a dogfooding skill"*
 
-✅ **Result:** Agents adjusted the rules, fixed errors, and all edits are merged back into main. Stricter linting rules will catch any human/agent mistakes earlier.
+✅ **Result:** The agent used the browser to actually play the app and produced a critical report. You then saved that testing approach as a reusable dogfooding skill.
 
----
-
-### Task 3: Check Tailwind 4 Instructions
-
-Tailwind v4 instructions close gaps from training data and document the latest best practices.
-
-See prompt in the footer.
-
-> 💡 **Optional:** If interested how it works, delete main text and re-run the prompt
+> 💡 **Context engineering insight:** The agent needs hands-on context — running the app, seeing the UI, clicking through flows — to truly understand how it works and validate functionality. Code alone isn't enough; interacting with the running product closes the gap between reading code and understanding the user experience.
 
 ---
 
-### Task 4: Check Frontend Instructions
+### Task 3: Customization Modal
+
+Tour the repo customizations to understand how context engineering works in practice.
+
+**Steps:**
+
+1. Open the Customization panel, Command: `Chat: Open Customizations (Preview)`
+2. Browse the repo customizations — instructions, skills, and agents
+3. Look at the **frontend design skill** and **Tailwind 4 instructions**
+
+> 💡 **Think about:** What conventions or patterns from your own projects could become instructions or skills?
+
+---
+
+### Task 4: Check Frontend Design Skill
 
 The "no purple gradients" instructions challenge the agent to think like a designer and be more bold and creative.
 
@@ -117,5 +122,6 @@ Source: Claude blog, linked in the footer.
 You've learned how to:
 - Set up your development environment
 - Generate and refine workspace instructions
-- Use background and cloud agents for parallel work
-- Understand existing instruction files
+- Dogfood your app with the agent's built-in browser
+- Create and save custom skills
+- Tour repo customizations (instructions, skills, agents)

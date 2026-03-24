@@ -4,7 +4,7 @@
 
 ---
 
-Define your own specialized workflows with custom agents, beyond generic coding prompts. Works both locally and in cloud coding agent.
+Define your own specialized workflows with custom agents, beyond generic coding prompts.
 
 ---
 
@@ -16,8 +16,6 @@ Define your own specialized workflows with custom agents, beyond generic coding 
 2. `Update questions to …` or just `Update quiz`
 3. Check out the prompt in `.github/agents/quiz-master.agent.md`
 4. Optional: Follow-up to nudge for more creativity, chaos, engagement
-5. `+` → `New cloud agent`: pick Quiz Master
-6. Pick another theme and send
 
 **Theme Ideas:**
 
@@ -48,5 +46,4 @@ Define your own specialized workflows with custom agents, beyond generic coding 
 You've learned how to:
 - Use custom agents for specialized workflows
 - Generate themed quiz questions
-- Run custom agents in the cloud
 - Iterate on agent output for better results

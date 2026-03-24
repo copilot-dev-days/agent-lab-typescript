@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch in integrated browser",
+      "request": "launch",
+      "type": "editor-browser",
+      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:5173/",
+      "preLaunchTask": "npm: dev"
+    }
+  ]
+}

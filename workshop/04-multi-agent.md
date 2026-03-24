@@ -10,45 +10,9 @@
 
 **Steps:**
 
-1. Enable agent-scoped hooks in VS Code Settings:
-   - Set `chat.useCustomAgentHooks` to `true`
-2. Create the hook script `.github/hooks/check-tests.sh`:
-
-   ```bash
-   #!/bin/bash
-   # Read stdin JSON to check if hook already fired (prevent infinite loops)
-   INPUT=$(cat)
-   STOP_HOOK_ACTIVE=$(echo "$INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('stop_hook_active', False))" 2>/dev/null)
-
-   if [ "$STOP_HOOK_ACTIVE" = "True" ]; then
-     echo '{}'
-     exit 0
-   fi
-
-   # Run tests
-   npx vitest run 2>&1
-   TEST_EXIT=$?
-
-   if [ $TEST_EXIT -ne 0 ]; then
-     echo '{"hookSpecificOutput":{"hookEventName":"Stop","decision":"block","reason":"Tests are still failing — keep implementing until they pass."}}'
-     exit 0
-   fi
-
-   echo '{}'
-   exit 0
-   ```
-
-3. Make it executable: `chmod +x .github/hooks/check-tests.sh`
-4. Open `.github/agents/tdd-green.agent.md` and add the hook to the YAML frontmatter:
-
-   ```yaml
-   hooks:
-     Stop:
-       - type: command
-         command: .github/hooks/check-tests.sh
-   ```
-
-5. Verify the hook loads: open the **GitHub Copilot Chat Hooks** output channel (Output panel → channel dropdown)
+1. Open `.github/agents/tdd-green.agent.md`
+2. Prompt `Add a agent-scoped stop hooks: to tdd-green that checks if tests all passed`
+3. In `.github/agents/tdd-green.agent.md` the hook should be defined in the YAML frontmatter.
 
 ✅ **Result:** TDD Green now has a safety net — it will keep working until all tests pass before handing back control.
 
@@ -67,6 +31,7 @@ Use the TDD Supervisor to add a "Four Corners" bingo pattern. The hook you just 
    - Review the new tests in VS Code's test runner
    - **TDD Green** implements the minimal code to pass — hook fires on stop, keeps it going if tests fail
    - **TDD Refactor** cleans up the implementation
+   - Click on any sub-agent while it runs to see its context and instructions
 4. Review the summary of changes
 
 ✅ **Result:** Orchestrated TDD cycle with automatic test gating — no manual handoffs between agents.
@@ -79,10 +44,11 @@ Inspect what happened under the hood — did the hook fire? How did agents commu
 
 **Steps:**
 
-1. Open Agent Debug Logs: gear icon (⚙️) in Chat view → **Show Agent Debug Logs**
-2. **Logs view:** filter for hook execution events during TDD Green
-3. **Agent Flow Chart:** visualize the TDD Supervisor → Red → Green → Refactor orchestration
-4. **Summary view:** review total tool calls and token usage
+1. Verify the hook loads: open the **GitHub Copilot Chat Hooks** output channel (Output panel → channel dropdown)
+2. Open Agent Debug Logs: gear icon (⚙️) in Chat view → **Show Agent Debug Logs**
+3. **Logs view:** filter for hook execution events during TDD Green
+4. **Agent Flow Chart:** visualize the TDD Supervisor → Red → Green → Refactor orchestration
+5. **Summary view:** review total tool calls and token usage
 
 **Bonus:** Click the ✨ sparkle icon to attach debug events to a new chat, then ask: `/troubleshoot did the Stop hook fire during TDD Green?`
 
