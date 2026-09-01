@@ -50,8 +50,6 @@ No painel de Chat:
 /setup
 ```
 
-O agente vai identificar quaisquer passos de instalação necessários.
-
 Na primeira ferramenta de terminal, habilite *Auto*-*Approve*.
 
 Deixe o agente identificar quaisquer passos de instalação necessários.

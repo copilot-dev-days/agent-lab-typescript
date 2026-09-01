@@ -1,7 +1,7 @@
 ---
 agent: agent
 description: Get my development workspace ready
-tools: ['vscode/openSimpleBrowser', 'execute/runTask', 'read/getTaskOutput', 'execute/runInTerminal', 'read', 'search', 'todo']
+tools: ['browser', 'execute/runTask', 'read/getTaskOutput', 'execute/runInTerminal', 'read', 'search', 'todo']
 ---
 
 Your goal is to successfully build and run the workspace as local development environment.
