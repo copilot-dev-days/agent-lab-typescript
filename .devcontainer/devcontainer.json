@@ -1,5 +1,5 @@
 {
-  "name": "Soc-Ops React TypeScript",
+  "name": "Bingo Mixer React TypeScript",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
   "customizations": {
     "vscode": {

@@ -49,8 +49,6 @@ In the Chat panel:
 /setup
 ```
 
-The agent will figure out any required installation steps.
-
 On the first terminal tool, enable *Auto*-*Approve*.
 
 Let the agent figure out any required installation steps.
