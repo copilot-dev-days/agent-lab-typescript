@@ -27,7 +27,7 @@ Você completou o **VS Code GitHub Copilot Agent Lab**!
 | Habilidade | Descrição |
 |------------|-----------|
 | **Engenharia de Contexto** | Integração da IA ao seu codebase com instruções |
-| **Primitivas Agênticas** | Background agents, cloud agents e fluxos de trabalho personalizados |
+| **Primitivas Agênticas** | Agentes personalizados, subagentes e fluxos locais |
 | **Desenvolvimento Design-First** | Iteração de UI com assistência de IA |
 | **Desenvolvimento Orientado por Testes** | Código confiável com agentes TDD |
 
@@ -38,7 +38,7 @@ Você completou o **VS Code GitHub Copilot Agent Lab**!
 ### Recursos
 
 - 📺 [VS Code on YouTube](https://www.youtube.com/code)
-- 📖 [VS Code Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+- 📖 [Documentação de agentes do VS Code](https://code.visualstudio.com/docs/agents/overview)
 - 🌟 [Awesome Copilot](https://github.com/github/awesome-copilot)
 
 ### Próximos Passos

@@ -6,7 +6,7 @@
 
 In this section, you'll set up your development environment and teach GitHub Copilot about your codebase.
 
-> 🎮 **[Play the Bingo Mixer game](../game/)** — See what you'll be building!
+> 🎮 **[Play the Bingo Mixer game](https://copilot-dev-days.github.io/agent-lab-typescript/game/)** — See what you'll be building!
 
 ---
 
@@ -41,7 +41,17 @@ In this section, you'll set up your development environment and teach GitHub Cop
 2. Click **Code** → **Codespaces** → **Create codespace on main**
 3. ✅ Codespace starts with your repo and devcontainer.
 
-### Step 4: Run the Setup Agent
+### Step 4: Review Trust and Approvals
+
+Before setup becomes autonomous:
+
+1. In Chat, select the **Local** session target and **Default Approvals**. Do not use **Bypass Approvals**, which approves every tool call.
+2. Open `.vscode/settings.json` and review the terminal allowlist. The workspace adds auto-approval only for its exact `npm run dev`, `lint`, `build`, and `test` scripts plus `npm test`; installation, `npx`, script arguments, and unrelated commands still require review.
+3. Apply least privilege: inspect each requested command and approve only the exact command for the shortest useful scope.
+
+> Some Agent Host worktree sessions are fixed to Bypass Approvals. Use a regular Local folder session for this exercise; a worktree is not a security boundary. Learn more in [Approvals](https://code.visualstudio.com/docs/agents/run/approvals).
+
+### Step 5: Run the Setup Skill
 
 In the Chat panel:
 
@@ -49,9 +59,7 @@ In the Chat panel:
 /setup
 ```
 
-On the first terminal tool, enable *Auto*-*Approve*.
-
-Let the agent figure out any required installation steps.
+When the skill proposes `npm install`, inspect it and approve that exact command once. Let the agent determine the remaining installation steps without broadening approvals.
 
 ✅ **Success:** App is running and open in browser!
 
@@ -105,6 +113,8 @@ Tour the repo customizations to understand how context engineering works in prac
 3. Look at the **frontend design skill** and **Tailwind 4 instructions**
 
 > 💡 **Think about:** What conventions or patterns from your own projects could become instructions or skills?
+
+> 🔒 **Exclusion note:** The root `.copilotignore` contains supplemental patterns for environment files, private keys, and generated output on accounts where VS Code enables this feature. It deliberately does not exclude the workshop or source code, and it is not a security boundary. Organization-managed [content exclusion](https://docs.github.com/en/copilot/concepts/context/content-exclusion) requires Copilot Business or Enterprise administration and currently does not cover IDE Edit/Agent modes or Copilot CLI.
 
 ---
 

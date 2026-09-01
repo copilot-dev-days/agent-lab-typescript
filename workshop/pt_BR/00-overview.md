@@ -2,7 +2,7 @@
 # 🎮 VS Code GitHub Copilot Agent Lab
 [← README](../../README.pt_BR.md)
 
-- [ ] VS Code mais recente **v1.113** (sem atualização pendente)
+- [ ] VS Code **v1.135 ou posterior**
 
 > **Nível:** Intermediário
 > **Stack:** TypeScript / Vite / Tailwind CSS
@@ -13,11 +13,11 @@ Bem-vindo ao **Bingo Mixer** — um workshop prático onde você vai transformar
 
 ## 📋 Lista Rápida
 
-- [ ] VS Code mais recente **v1.113** (sem atualização pendente)
+- [ ] VS Code **v1.135 ou posterior**
   - [ ] Verifique se as atualizações não estão desabilitadas
-- [ ] Logado com GitHub (Copilot Free não pode executar cloud agent!)
+- [ ] Conectado ao GitHub com acesso ao Copilot
 - [ ] Git & Node instalados
-- [ ] Chat aberto e Agent pronto para ação
+- [ ] Chat aberto com **Local** selecionado como destino da sessão
 
 *Opcional*: Use DevContainer ou WSL.
 
@@ -42,6 +42,7 @@ Bem-vindo ao **Bingo Mixer** — um workshop prático onde você vai transformar
 | [**02**](02-design.md) | Frontend Design-First | Redesenhe a UI com temas criativos |
 | [**03**](03-quiz-master.md) | Quiz Master Personalizado | Crie seus próprios temas de quiz com agentes personalizados |
 | [**04**](04-multi-agent.md) | Desenvolvimento Multi-Agente | Construa novas funcionalidades com TDD e agentes de design |
+| [**05**](05-complete.md) | Conclusão e Próximos Passos | Revise o que você construiu e continue explorando |
 
 ---
 
@@ -56,5 +57,5 @@ Bem-vindo ao **Bingo Mixer** — um workshop prático onde você vai transformar
 ## 🔗 Recursos
 
 - [VS Code on YouTube](https://www.youtube.com/code)
-- [VS Code Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+- [Documentação de agentes do VS Code](https://code.visualstudio.com/docs/agents/overview)
 - [Awesome Copilot](https://github.com/github/awesome-copilot) para mais customizações

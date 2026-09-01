@@ -2,7 +2,7 @@
 [← README](../README.md)
 
 ---
-- [ ] VS Code **v1.113+**
+- [ ] VS Code **v1.135+**
 > **Quick Reference Guide** — For detailed instructions, see the individual parts below.
 
 ---
@@ -16,15 +16,16 @@
 | [**02**](02-design.md) | Design-First Frontend |
 | [**03**](03-quiz-master.md) | Custom Quiz Master |
 | [**04**](04-multi-agent.md) | Multi-Agent Development |
+| [**05**](05-complete.md) | Completion & Next Steps |
 
 ---
 
 ## ⚡ Quick Checklist
 
-- [ ] VS Code **v1.113+**
+- [ ] VS Code **v1.135+**
 - [ ] GitHub Copilot (Pro/Business/Enterprise)
 - [ ] Git & Node 22+
-- [ ] Chat panel open
+- [ ] Chat panel open with the **Local** session target
 
 ---
 
@@ -34,7 +35,7 @@
 # 1. Create repo from template: github.com/copilot-dev-days/agent-lab-typescript
 # 2. Enable Pages: Settings > Pages > GitHub Actions
 # 3. Choose one: clone repo in VS Code OR create a Codespace from your repo
-# Then run:
+# Open a Local chat with Default Approvals, then run:
 # /setup
 ```
 
@@ -43,7 +44,7 @@
 ## 📋 Task Summary
 
 ### Part 1: Context Engineering
-- [ ] Run /setup agent
+- [ ] Run the /setup project skill
 - [ ] Generate workspace instructions
 - [ ] Dogfood the app with built-in browser
 - [ ] Create a custom dogfooding skill
@@ -51,7 +52,7 @@
 
 ### Part 2: Design-First Frontend
 - [ ] Full UI redesign (Plan Mode)
-- [ ] Update copilot-instructions.md
+- [ ] Review `.github/copilot-instructions.md`
 - [ ] Dogfood the redesign
 
 ### Part 3: Quiz Master
@@ -63,6 +64,9 @@
 - [ ] Agent Debug Logs
 - [ ] Card Deck Shuffle mode (Pixel Jam)
 - [ ] UX Review
+
+### Part 5: Completion & Next Steps
+- [ ] Review outcomes and continue exploring
 
 ---
 
@@ -78,5 +82,5 @@
 ## 🔗 Resources
 
 - [VS Code YouTube](https://www.youtube.com/code)
-- [Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+- [VS Code agents documentation](https://code.visualstudio.com/docs/agents/overview)
 - [Awesome Copilot](https://github.com/github/awesome-copilot)

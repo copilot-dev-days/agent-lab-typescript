@@ -18,6 +18,7 @@ Bingo Mixer is a social bingo game for in-person mixers. Find people who match t
 | [**02**](workshop/02-design.md) | Design-First Frontend |
 | [**03**](workshop/03-quiz-master.md) | Custom Quiz Master |
 | [**04**](workshop/04-multi-agent.md) | Multi-Agent Development |
+| [**05**](workshop/05-complete.md) | Completion & Next Steps |
 
 > 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
 
@@ -25,6 +26,7 @@ Bingo Mixer is a social bingo game for in-person mixers. Find people who match t
 
 ## Prerequisites
 
+- VS Code **1.135 or later** with GitHub Copilot; use a **Local** chat session for the lab
 - [Node.js 22](https://nodejs.org/) or higher
 
 ## Dev Container / Codespaces

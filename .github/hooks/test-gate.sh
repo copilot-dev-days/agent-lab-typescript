@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Stop hook for TDD Green agent: enforces all tests must pass before stopping.
+# Workspace Stop hook helper: enforces passing tests for every agent.
 # Reads JSON input from stdin; outputs JSON to stdout.
 
 set -euo pipefail
@@ -7,7 +7,7 @@ set -euo pipefail
 HOOK_INPUT=$(cat)
 
 # Prevent infinite loops: if the agent is already retrying from a previous stop hook, let it stop.
-STOP_HOOK_ACTIVE=$(echo "$HOOK_INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('stop_hook_active', False))" 2>/dev/null || echo "False")
+STOP_HOOK_ACTIVE=$(echo "$HOOK_INPUT" | node -e "let input=''; process.stdin.on('data', chunk => input += chunk); process.stdin.on('end', () => console.log(JSON.parse(input).stop_hook_active === true ? 'True' : 'False'))" 2>/dev/null || echo "False")
 if [ "$STOP_HOOK_ACTIVE" = "True" ]; then
   echo '{"hookSpecificOutput":{"hookEventName":"Stop"}}'
   exit 0

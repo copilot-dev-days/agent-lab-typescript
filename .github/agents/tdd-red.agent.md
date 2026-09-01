@@ -1,7 +1,7 @@
 ---
 name: TDD Red
 description: TDD phase for writing FAILING tests
-tools: ['read', 'edit', 'search', 'execute/runTests']
+tools: ['read', 'edit', 'search']
 disable-model-invocation: true
 user-invocable: false
 ---

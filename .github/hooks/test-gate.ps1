@@ -1,4 +1,4 @@
-# Stop hook for TDD Green agent: enforces all tests must pass before stopping.
+# Workspace Stop hook helper: enforces passing tests for every agent.
 # Reads JSON input from stdin; outputs JSON to stdout.
 
 $ErrorActionPreference = "Stop"

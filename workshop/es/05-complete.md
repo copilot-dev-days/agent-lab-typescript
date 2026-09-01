@@ -27,7 +27,7 @@
 | Habilidad | Descripción |
 |-----------|-------------|
 | **Ingeniería de Contexto** | Integración de la IA a tu codebase con instrucciones |
-| **Primitivas Agénticas** | Background agents, cloud agents y flujos de trabajo personalizados |
+| **Primitivas Agénticas** | Agentes personalizados, subagentes y flujos locales |
 | **Desarrollo Design-First** | Iteración de UI con asistencia de IA |
 | **Desarrollo Orientado por Pruebas** | Código confiable con agentes TDD |
 
@@ -38,7 +38,7 @@
 ### Recursos
 
 - 📺 [VS Code on YouTube](https://www.youtube.com/code)
-- 📖 [VS Code Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+- 📖 [Documentación de agentes de VS Code](https://code.visualstudio.com/docs/agents/overview)
 - 🌟 [Awesome Copilot](https://github.com/github/awesome-copilot)
 
 ### Próximos Pasos
