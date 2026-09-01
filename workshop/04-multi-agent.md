@@ -23,6 +23,8 @@
 
 Use the TDD agent to add a "Four Corners" bingo pattern. The workspace stop hook you set up will enforce test discipline — every agent must leave tests passing before it hands back control.
 
+Unlike the reviewed handoff in Part 3, the TDD agent's `agents` list lets it invoke Red, Green, and Refactor autonomously as subagents.
+
 **Steps:**
 
 1. New chat with agent: `TDD`
@@ -78,6 +80,8 @@ Break down agent workflows into specific focus areas, like design-first.
 ## Task 5: UX Review Agent
 
 Combine MCP, custom workflows, and subagent isolation in an agent for powerful workflows. Focus on different aspects, like usability, a11y, compliance.
+
+> 🔒 **Least-privilege option:** [GitHub MCP configuration](https://github.com/github/github-mcp-server/blob/main/docs/server-configuration.md) can limit loaded toolsets or enable read-only mode. This lab keeps writes available because the bonus files and assigns issues; for a read-only review, enable read-only mode and skip that bonus. Lockdown mode is best-effort content filtering, not a security boundary.
 
 **Steps:**
 

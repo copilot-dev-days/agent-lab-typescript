@@ -45,18 +45,19 @@
 
 ### Part 1: Context Engineering
 - [ ] Run the /setup project skill
-- [ ] Generate workspace instructions
+- [ ] Generate workspace instructions (`.github/copilot-instructions.md` or root `AGENTS.md`)
 - [ ] Dogfood the app with built-in browser
 - [ ] Create a custom dogfooding skill
 - [ ] Tour repo customizations
 
 ### Part 2: Design-First Frontend
 - [ ] Full UI redesign (Plan Mode)
-- [ ] Review `.github/copilot-instructions.md`
-- [ ] Dogfood the redesign
+- [ ] Compact design context when supported
+- [ ] Review generated design instructions
+- [ ] Comment on one browser element and verify the fix
 
 ### Part 3: Quiz Master
-- [ ] Generate custom quiz theme
+- [ ] Generate a custom quiz theme and approve the Pixel Jam handoff
 
 ### Part 4: Multi-Agent Development
 - [ ] Agent hooks — test gate

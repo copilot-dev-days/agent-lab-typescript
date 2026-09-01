@@ -49,7 +49,7 @@ Before setup becomes autonomous:
 2. Open `.vscode/settings.json` and review the terminal allowlist. The workspace adds auto-approval only for its exact `npm run dev`, `lint`, `build`, and `test` scripts plus `npm test`; installation, `npx`, script arguments, and unrelated commands still require review.
 3. Apply least privilege: inspect each requested command and approve only the exact command for the shortest useful scope.
 
-> Some Agent Host worktree sessions are fixed to Bypass Approvals. Use a regular Local folder session for this exercise; a worktree is not a security boundary. Learn more in [Approvals](https://code.visualstudio.com/docs/agents/run/approvals).
+> A Git worktree can give parallel agent sessions separate checked-out files so their edits do not collide, but it does not restrict commands, network access, or access outside that working copy. Some Agent Host worktree sessions are fixed to Bypass Approvals, so use a regular Local folder session for this exercise. Learn more in [Approvals](https://code.visualstudio.com/docs/agents/run/approvals).
 
 ### Step 5: Run the Setup Skill
 
@@ -78,11 +78,14 @@ Instructions guide all agentic codebase interactions, making them more efficient
 **Steps:**
 
 1. Run prompt: `/init` with Autopilot enabled
+   - Based on the repo's existing conventions, `/init` may generate or update `.github/copilot-instructions.md` or a root `AGENTS.md`.
    - While agent analyzes the codebase, optionally start next task
 2. Open a new chat for the next task, as init can take a while and we can review later.
 3. Review results — is it not too long and overly detailed
    1. Optional follow-up: *"Compress down and add a mandatory development [ ] checklist (lint, build, test) to the top"*
 4. Apply and commit
+
+> A root-level `AGENTS.md` is a portable option when several AI coding tools share the repo. Use one root file here; nested `AGENTS.md` behavior is experimental and outside this lab.
 
 ✅ **Result:** All future requests will have a basic map of the workspace.
 

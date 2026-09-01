@@ -24,6 +24,8 @@
 
 Usa el agente TDD para agregar un patrón de bingo "Four Corners". El stop hook del workspace que configuraste garantizará la disciplina de pruebas — cada agente debe dejar las pruebas pasando antes de devolver el control.
 
+A diferencia del handoff revisado en la Parte 3, la lista `agents` del agente TDD le permite invocar Red, Green y Refactor de forma autónoma como subagentes.
+
 **Pasos:**
 
 1. Nuevo chat con agente: `TDD`
@@ -79,6 +81,8 @@ Divide los flujos de trabajo de agentes en áreas de enfoque específicas, como 
 ## Tarea 5: Agente de Revisión de UX
 
 Combina MCP, flujos de trabajo personalizados y aislamiento de sub-agentes en un agente para flujos de trabajo poderosos. Enfócate en diferentes aspectos, como usabilidad, a11y, cumplimiento.
+
+> 🔒 **Opción de privilegio mínimo:** La [configuración de GitHub MCP](https://github.com/github/github-mcp-server/blob/main/docs/server-configuration.md) puede limitar los toolsets cargados o habilitar el modo de solo lectura. Este lab mantiene disponibles las operaciones de escritura porque el bonus registra y asigna issues; para una revisión de solo lectura, habilita ese modo y omite el bonus. El modo lockdown es un filtro de contenido de mejor esfuerzo, no un límite de seguridad.
 
 **Pasos:**
 

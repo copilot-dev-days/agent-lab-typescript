@@ -46,18 +46,19 @@
 
 ### Parte 1: Ingeniería de Contexto
 - [ ] Ejecutar la skill de proyecto /setup
-- [ ] Generar instrucciones del workspace
+- [ ] Generar instrucciones del workspace (`.github/copilot-instructions.md` o `AGENTS.md` en la raíz)
 - [ ] Probar la app con el navegador integrado
 - [ ] Crear una skill personalizada de dogfooding
 - [ ] Explorar las personalizaciones del repo
 
 ### Parte 2: Frontend Design-First
 - [ ] Rediseño completo de la UI (Plan Mode)
-- [ ] Revisar `.github/copilot-instructions.md`
-- [ ] Probar el rediseño
+- [ ] Compactar el contexto de diseño cuando sea compatible
+- [ ] Revisar las instrucciones de diseño generadas
+- [ ] Comentar un elemento del navegador y verificar la corrección
 
 ### Parte 3: Quiz Master
-- [ ] Generar tema personalizado de quiz
+- [ ] Generar un tema personalizado de quiz y aprobar el handoff a Pixel Jam
 
 ### Parte 4: Desarrollo Multi-Agente
 - [ ] Agent hooks — puerta de pruebas
