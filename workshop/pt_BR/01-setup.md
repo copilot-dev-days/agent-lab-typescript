@@ -50,7 +50,7 @@ Antes que o setup se torne autônomo:
 2. Abra `.vscode/settings.json` e revise a lista permitida do terminal. O workspace adiciona aprovação automática apenas para seus scripts exatos `npm run dev`, `lint`, `build` e `test`, além de `npm test`; instalação, `npx`, argumentos adicionais e comandos não relacionados ainda exigem revisão.
 3. Aplique privilégio mínimo: inspecione cada comando solicitado e aprove apenas o comando exato pelo menor período útil.
 
-> Algumas sessões de worktree do Agent Host ficam fixas em Bypass Approvals. Use uma sessão de pasta Local comum para este exercício; um worktree não é um limite de segurança. Saiba mais em [Approvals](https://code.visualstudio.com/docs/agents/run/approvals).
+> Um Git worktree pode dar a sessões de agentes paralelas arquivos de trabalho separados para que suas alterações não entrem em conflito, mas não restringe comandos, acesso à rede nem acesso fora dessa cópia de trabalho. Algumas sessões de worktree do Agent Host ficam fixas em Bypass Approvals, então use uma sessão de pasta Local comum para este exercício. Saiba mais em [Approvals](https://code.visualstudio.com/docs/agents/run/approvals).
 
 ### Passo 5: Execute a Skill de Setup
 
@@ -79,11 +79,14 @@ Instruções orientam todas as interações agênticas com o codebase, tornando-
 **Passos:**
 
 1. Execute o prompt: `/init` com Autopilot habilitado
+   - Com base nas convenções existentes do repo, `/init` pode gerar ou atualizar `.github/copilot-instructions.md` ou um `AGENTS.md` na raiz.
    - Enquanto o agente analisa o codebase, opcionalmente comece a próxima tarefa
 2. Abra um novo chat para a próxima tarefa, pois o init pode demorar e podemos revisar depois.
 3. Revise os resultados — não está longo e detalhado demais?
    1. Follow-up opcional: *"Comprima e adicione uma checklist de desenvolvimento obrigatória [ ] (lint, build, test) no topo"*
 4. Aplique e faça commit
+
+> Um `AGENTS.md` na raiz é uma opção portátil quando várias ferramentas de IA compartilham o repo. Use apenas um arquivo raiz aqui; o comportamento de `AGENTS.md` aninhados é experimental e está fora deste lab.
 
 ✅ **Resultado:** Todas as futuras solicitações terão um mapa básico do workspace.
 

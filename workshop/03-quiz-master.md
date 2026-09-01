@@ -14,8 +14,11 @@ Define your own specialized workflows with custom agents, beyond generic coding 
 
 1. New Chat, pick *Quiz Master* as custom agent
 2. `Update questions to …` or just `Update quiz`
-3. Check out the prompt in `.github/agents/quiz-master.agent.md`
-4. Optional: Follow-up to nudge for more creativity, chaos, engagement
+3. Check the prompt and `handoffs` frontmatter in `.github/agents/quiz-master.agent.md`
+4. Review the generated questions, then select **Polish this quiz theme**. Because the handoff uses `send: false`, inspect or edit the pre-filled prompt before you approve and send it to *Pixel Jam*.
+5. Review Pixel Jam's focused visual integration of the new theme and its browser verification.
+
+> ⏱️ **Handoff exercise (2 minutes):** This is a human-approved handoff: the conversation context moves to another specialist, but that specialist waits for you to send the prompt. In Part 4, the TDD orchestrator instead invokes Red, Green, and Refactor as autonomous subagents without approval between phases.
 
 **Theme Ideas:**
 
@@ -37,7 +40,7 @@ Define your own specialized workflows with custom agents, beyond generic coding 
 - Mystery Bingo: Guess who matches a trait and verify
 - Chaos Bingo: Surprising, absurd, unpredictable prompts
 
-✅ **Result:** Custom agent runs through the updated quiz, generating new creative and engaging questions.
+✅ **Result:** Quiz Master creates engaging themed questions, then an approved handoff lets Pixel Jam visually integrate that specific theme.
 
 ---
 
@@ -46,4 +49,5 @@ Define your own specialized workflows with custom agents, beyond generic coding 
 You've learned how to:
 - Use custom agents for specialized workflows
 - Generate themed quiz questions
-- Iterate on agent output for better results
+- Review and trigger a scoped handoff between custom agents
+- Distinguish human-approved handoffs from autonomous subagent orchestration

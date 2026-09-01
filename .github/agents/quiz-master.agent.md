@@ -3,6 +3,11 @@ name: Quiz Master
 description: Creates fun and engaging icebreaker questions and bingo prompts
 argument-hint: Describe the theme of questions you want
 tools: ['search', 'edit']
+handoffs:
+  - label: Polish this quiz theme
+    agent: Pixel Jam
+    prompt: Visually integrate the new themed quiz into the existing Bingo Mixer UI. Preserve game behavior, use the running browser to verify the themed experience, and keep changes focused for my review.
+    send: false
 ---
 
 Your goal is to curate engaging icebreaker bingo questions tailored to a given theme.

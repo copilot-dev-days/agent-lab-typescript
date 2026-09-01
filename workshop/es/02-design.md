@@ -53,6 +53,8 @@ Plan mode para comenzar cualquier trabajo grande — itera en el plan (¡2+ vece
 
 ✅ **Resultado:** Las instrucciones de frontend y Tailwind se usan para crear un diseño hermoso.
 
+> ⏱️ **Punto de control de contexto (1 minuto):** Después de esta conversación de diseño sustancial, ejecuta `/compact` si aparece en el menú de comandos con barra de tu destino de sesión de Copilot o Copilot CLI. Revisa el resumen antes de continuar. Si tu sesión Local no lo muestra, omite este paso. La compactación conserva las decisiones clave y libera contexto para la siguiente fase: ingeniería de contexto aplicada a la conversación.
+
 ---
 
 ### Tarea 2: Mantén las Instrucciones Actualizadas
@@ -68,17 +70,19 @@ Bonus: Verifica que GitHub Pages se esté actualizando.
 
 ---
 
-### Tarea 3: Prueba el Rediseño
+### Tarea 3: Refina un Elemento Real
 
-Re-ejecuta la skill de dogfooding de la Parte 1 para validar tu nuevo diseño.
+Reemplaza un follow-up de diseño a ciegas con feedback preciso sobre la UI en ejecución.
 
 **Pasos:**
 
-1. Prompt: *"Haz dogfooding de la app — enfócate en el nuevo diseño"*
-2. Compara el feedback con el reporte de dogfooding anterior
-3. Opcional: Resuelve cualquier problema que el agente señale
+1. Mantén la app rediseñada abierta en el navegador integrado de VS Code.
+2. Abre el menú **Add to Chat** de la barra del navegador y selecciona **Comment on Elements** (`Ctrl+Alt+C` en Windows/Linux).
+3. Selecciona un elemento real con un problema visible, como la acción principal o una tarjeta de pregunta, y describe el problema visual o de UX específico.
+4. En Chat, envía: *"Corrige este problema del elemento sin cambiar el comportamiento del juego. Luego usa las herramientas del navegador para inspeccionar el elemento actualizado y verificar su interacción."*
+5. Revisa el cambio y la verificación del navegador que hizo el agente; después recarga la página y confirma que el problema está resuelto.
 
-✅ **Resultado:** El agente juega la app rediseñada y da feedback crítico actualizado.
+✅ **Resultado:** El elemento seleccionado lleva contexto concreto del navegador a Chat, y el agente implementa y verifica una mejora enfocada.
 
 ---
 
@@ -87,5 +91,6 @@ Re-ejecuta la skill de dogfooding de la Parte 1 para validar tu nuevo diseño.
 Aprendiste cómo:
 - Usar Plan Mode para tareas complejas de diseño
 - Iterar en los planes antes de implementar
+- Compactar el contexto acumulado antes de cambiar de fase cuando sea compatible
 - Mantener instrucciones actualizadas con cambios
-- Re-ejecutar dogfooding para validar cambios de diseño
+- Comentar un elemento real del navegador y verificar la corrección implementada

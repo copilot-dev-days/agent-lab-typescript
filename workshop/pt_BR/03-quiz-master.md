@@ -15,8 +15,11 @@ Defina seus próprios fluxos de trabalho especializados com agentes personalizad
 
 1. Novo Chat, selecione *Quiz Master* como agente personalizado
 2. `Atualize as perguntas para…` ou apenas `Update quiz`
-3. Confira o prompt em `.github/agents/quiz-master.agent.md`
-4. Opcional: Follow-up para pedir mais criatividade, caos, engajamento
+3. Confira o prompt e o frontmatter `handoffs` em `.github/agents/quiz-master.agent.md`
+4. Revise as perguntas geradas e selecione **Polish this quiz theme**. Como o handoff usa `send: false`, inspecione ou edite o prompt pré-preenchido antes de aprová-lo e enviá-lo ao *Pixel Jam*.
+5. Revise a integração visual focada que o Pixel Jam faz do novo tema e sua verificação no navegador.
+
+> ⏱️ **Exercício de handoff (2 minutos):** Este é um handoff aprovado por uma pessoa: o contexto da conversa passa para outro especialista, mas ele espera você enviar o prompt. Na Parte 4, o orquestrador TDD invoca Red, Green e Refactor como subagentes autônomos sem aprovação entre as fases.
 
 **Ideias de Temas:**
 
@@ -38,7 +41,7 @@ Defina seus próprios fluxos de trabalho especializados com agentes personalizad
 - Mystery Bingo: Adivinhe quem tem um traço e verifique
 - Chaos Bingo: Prompts surpreendentes, absurdos e imprevisíveis
 
-✅ **Resultado:** O agente personalizado percorre o quiz atualizado, gerando novas perguntas criativas e envolventes.
+✅ **Resultado:** O Quiz Master cria perguntas temáticas envolventes e um handoff aprovado permite que o Pixel Jam integre visualmente esse tema específico.
 
 ---
 
@@ -47,4 +50,5 @@ Defina seus próprios fluxos de trabalho especializados com agentes personalizad
 Você aprendeu como:
 - Usar agentes personalizados para fluxos de trabalho especializados
 - Gerar perguntas de quiz temáticas
-- Iterar na saída do agente para melhores resultados
+- Revisar e acionar um handoff focado entre agentes personalizados
+- Distinguir handoffs aprovados por pessoas da orquestração autônoma de subagentes
