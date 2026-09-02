@@ -3,7 +3,7 @@
 [← README](../../README.es.md)
 
 ---
-- [ ] VS Code **v1.113+**
+- [ ] VS Code **v1.135+**
 > **Guía de Referencia Rápida** — Para instrucciones detalladas, consulta las partes individuales a continuación.
 
 ---
@@ -17,15 +17,16 @@
 | [**02**](02-design.md) | Frontend Design-First |
 | [**03**](03-quiz-master.md) | Quiz Master Personalizado |
 | [**04**](04-multi-agent.md) | Desarrollo Multi-Agente |
+| [**05**](05-complete.md) | Finalización y Próximos Pasos |
 
 ---
 
 ## ⚡ Lista Rápida
 
-- [ ] VS Code **v1.113+**
+- [ ] VS Code **v1.135+**
 - [ ] GitHub Copilot (Pro/Business/Enterprise)
 - [ ] Git & Node 22+
-- [ ] Panel de Chat abierto
+- [ ] Panel de Chat abierto con el destino de sesión **Local**
 
 ---
 
@@ -35,7 +36,7 @@
 # 1. Crea un repo desde la plantilla: github.com/copilot-dev-days/agent-lab-typescript
 # 2. Habilita Pages: Settings > Pages > GitHub Actions
 # 3. Elige una opción: clona el repo en VS Code O crea un Codespace desde tu repo
-# Luego ejecuta:
+# Abre un chat Local con Default Approvals y luego ejecuta:
 # /setup
 ```
 
@@ -44,19 +45,20 @@
 ## 📋 Resumen de Tareas
 
 ### Parte 1: Ingeniería de Contexto
-- [ ] Ejecutar el agente /setup
-- [ ] Generar instrucciones del workspace
+- [ ] Ejecutar la skill de proyecto /setup
+- [ ] Generar instrucciones del workspace (`.github/copilot-instructions.md` o `AGENTS.md` en la raíz)
 - [ ] Probar la app con el navegador integrado
 - [ ] Crear una skill personalizada de dogfooding
 - [ ] Explorar las personalizaciones del repo
 
 ### Parte 2: Frontend Design-First
 - [ ] Rediseño completo de la UI (Plan Mode)
-- [ ] Actualizar copilot-instructions.md
-- [ ] Probar el rediseño
+- [ ] Compactar el contexto de diseño cuando sea compatible
+- [ ] Revisar las instrucciones de diseño generadas
+- [ ] Comentar un elemento del navegador y verificar la corrección
 
 ### Parte 3: Quiz Master
-- [ ] Generar tema personalizado de quiz
+- [ ] Generar un tema personalizado de quiz y aprobar el handoff a Pixel Jam
 
 ### Parte 4: Desarrollo Multi-Agente
 - [ ] Agent hooks — puerta de pruebas
@@ -64,6 +66,9 @@
 - [ ] Agent Debug Logs
 - [ ] Modo Card Deck Shuffle (Pixel Jam)
 - [ ] Revisión de UX
+
+### Parte 5: Finalización y Próximos Pasos
+- [ ] Revisar resultados y seguir explorando
 
 ---
 
@@ -79,5 +84,5 @@
 ## 🔗 Recursos
 
 - [VS Code YouTube](https://www.youtube.com/code)
-- [Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+- [Documentación de agentes de VS Code](https://code.visualstudio.com/docs/agents/overview)
 - [Awesome Copilot](https://github.com/github/awesome-copilot)

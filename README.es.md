@@ -17,6 +17,7 @@ Bingo Mixer es un juego de bingo social para encuentros presenciales. ¡Encuentr
 | [**02**](workshop/es/02-design.md) | Frontend Design-First |
 | [**03**](workshop/es/03-quiz-master.md) | Quiz Master Personalizado |
 | [**04**](workshop/es/04-multi-agent.md) | Desarrollo Multi-Agente |
+| [**05**](workshop/es/05-complete.md) | Finalización y Próximos Pasos |
 
 > 📝 Las guías del lab también están disponibles en la carpeta [`workshop/es/`](workshop/es/) para lectura offline.
 
@@ -24,6 +25,7 @@ Bingo Mixer es un juego de bingo social para encuentros presenciales. ¡Encuentr
 
 ## Requisitos Previos
 
+- VS Code **1.135 o posterior** con GitHub Copilot; usa una sesión de chat **Local** para el lab
 - [Node.js 22](https://nodejs.org/) o superior
 
 ## Dev Container / Codespaces

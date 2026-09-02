@@ -1,1 +1,8 @@
-# workshop
+# Supplemental context hygiene; this file is not a security boundary.
+.env
+.env.*
+!.env.example
+**/*.pem
+**/*.key
+dist/
+coverage/

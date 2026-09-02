@@ -7,13 +7,14 @@
 
 ## Tarefa 1: Agent Hooks — Portão de Testes
 
-[Agent hooks](https://code.visualstudio.com/docs/copilot/customization/hooks) executam comandos shell em pontos-chave do ciclo de vida durante sessões de agente. Vamos adicionar um **Stop hook** com escopo de workspace que bloqueia *todos* os agentes — nenhum agente pode finalizar até que todos os testes passem.
+[Agent hooks](https://code.visualstudio.com/docs/agent-customization/hooks) executam comandos shell em pontos-chave do ciclo de vida durante sessões de agente. Os hooks estão em Preview e podem ser desabilitados pela política `ChatHooks` da sua organização. Vamos ativar um **Stop hook** com escopo de workspace que bloqueia *todos* os agentes — nenhum agente pode finalizar até que todos os testes passem.
 
 **Passos:**
 
-1. Abra a pasta `.github/hooks/`
-2. Prompt: *Adicione um agent hook que execute os testes e bloqueie o agente de finalizar se algum teste falhar*
-3. O hook deve ser um arquivo JSON em `.github/hooks/` (ex: `stop-test-gate.json`), não dentro de nenhum arquivo de agente individual.
+1. Confirme que `npm test` passa e depois abra `.github/hooks/`
+2. Revise os arquivos multiplataforma `test-gate.sh`, `test-gate.ps1` e o arquivo inativo `test-gate.json.example`
+3. Prompt: *Ative o Stop hook do workspace copiando o template seguro para `.github/hooks/test-gate.json`. Mantenha o padrão Bash e o override do Windows PowerShell.*
+4. Revise o JSON antes de aceitar. Se os hooks estiverem desabilitados por política, continue o exercício de TDD e execute os testes manualmente.
 
 ✅ **Resultado:** Todo agente agora tem uma rede de segurança — ele vai continuar trabalhando até que todos os testes passem antes de devolver o controle.
 
@@ -22,6 +23,8 @@
 ## Tarefa 2: Novo Padrão de Bingo (Orientado por TDD)
 
 Use o agente TDD para adicionar um padrão de bingo "Four Corners". O stop hook do workspace que você configurou vai garantir a disciplina de testes — todo agente deve deixar os testes passando antes de devolver o controle.
+
+Ao contrário do handoff revisado na Parte 3, a lista `agents` do agente TDD permite que ele invoque Red, Green e Refactor de forma autônoma como subagentes.
 
 **Passos:**
 
@@ -51,6 +54,8 @@ Inspecione o que aconteceu por baixo dos panos — o hook disparou? Como os agen
 4. **Agent Flow Chart:** visualize a orquestração TDD → Red → Green → Refactor
 5. **Aba Summary:** revise o total de chamadas de ferramenta e uso de tokens
 
+O workspace habilita os debug logs para sessões Local e Agent Host. Os logs podem conter prompts, contexto e detalhes de ferramentas; desabilite o registro em arquivos após o exercício em projetos sensíveis.
+
 **Bônus:** Clique no ícone ✨ sparkle para anexar eventos de debug a um novo chat, depois pergunte: `/troubleshoot o Stop hook disparou durante o ciclo TDD?`
 
 ✅ **Resultado:** Observabilidade completa da orquestração multi-agente e execução de hooks.
@@ -77,12 +82,14 @@ Divida fluxos de trabalho de agentes em áreas de foco específicas, como design
 
 Combine MCP, fluxos de trabalho personalizados e isolamento de sub-agentes em um agente para fluxos de trabalho poderosos. Foque em diferentes aspectos, como usabilidade, a11y, conformidade.
 
+> 🔒 **Opção de privilégio mínimo:** A [configuração do GitHub MCP](https://github.com/github/github-mcp-server/blob/main/docs/server-configuration.md) pode limitar os toolsets carregados ou habilitar o modo somente leitura. Este lab mantém operações de escrita disponíveis porque o bônus registra e atribui issues; para uma revisão somente leitura, habilite esse modo e pule o bônus. O modo lockdown é um filtro de conteúdo de melhor esforço, não um limite de segurança.
+
 **Passos:**
 
-1. Novo chat com agente: `Pixel Jam`: *Execute a revisão*
+1. Novo chat com agente: `UI Review`: *Começar*
 2. Mantenha o app aberto na pré-visualização do navegador do VS Code enquanto a revisão executa
 3. Acompanhe conforme ele revisa
-   - À parte: Abra `.github/agents/pixel-jam.agent.md` para revisar o prompt
+   - À parte: Abra `.github/agents/ui-review.agent.md` para revisar a definição do agente
 4. Contemple uma revisão profunda e detalhada
 
 **Bônus:**
@@ -93,7 +100,7 @@ Combine MCP, fluxos de trabalho personalizados e isolamento de sub-agentes em um
 
 ## Bônus: Continue Explorando
 
-- Corrija problemas da revisão de UX, delegados para agente em background ou cloud
+- Corrija problemas selecionados da revisão de UX em uma sessão Local separada
 - Adicione a possibilidade de ter múltiplos temas de perguntas para escolher
 - Adicione compartilhamento social no estado de vitória
 - Faça um app real para iOS ou full-stack?
@@ -113,5 +120,7 @@ Você aprendeu como:
 ### Continue Explorando
 
 - 📺 [VS Code on YouTube](https://www.youtube.com/code)
-- 📖 [VS Code Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+- 📖 [Documentação de agentes do VS Code](https://code.visualstudio.com/docs/agents/overview)
 - 🌟 [Awesome Copilot](https://github.com/github/awesome-copilot)
+
+👉 **[Continue para a Parte 5: Conclusão e Próximos Passos →](05-complete.md)**

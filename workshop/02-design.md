@@ -52,6 +52,8 @@ Plan mode to start off any bigger work items — iterate on the plan (2+ times!)
 
 ✅ **Result:** Frontend and Tailwind instructions are used to build a beautiful design.
 
+> ⏱️ **Context checkpoint (1 minute):** After this substantial design conversation, run `/compact` if it appears in the slash-command menu for your Copilot session target or Copilot CLI. Review the summary before continuing. If your Local session does not list it, skip this step. Compaction preserves key decisions while freeing context for the next phase—context engineering applied to the conversation itself.
+
 ---
 
 ### Task 2: Keep Instructions Updated
@@ -67,17 +69,19 @@ Bonus: Check that GitHub Pages is updating.
 
 ---
 
-### Task 3: Dogfood the Redesign
+### Task 3: Refine One Real Element
 
-Re-run the dogfooding skill from Part 1 to validate your new design.
+Replace a blind design follow-up with precise feedback on the running UI.
 
 **Steps:**
 
-1. Prompt: *"Dogfood the app — focus on the new design"*
-2. Compare feedback to the earlier dogfooding report
-3. Optional: Address any issues the agent flags
+1. Keep the redesigned app open in VS Code's integrated browser.
+2. Open the browser toolbar's **Add to Chat** menu and select **Comment on Elements** (`Ctrl+Alt+C` on Windows/Linux).
+3. Select one real element with a visible issue, such as the primary action or a question card, and describe the specific visual or UX problem.
+4. In Chat, send: *"Fix this element-level issue without changing game behavior. Then use browser tools to inspect the updated element and verify its interaction."*
+5. Review the edit and the agent's browser verification, then reload the page and confirm the issue is resolved.
 
-✅ **Result:** The agent plays through the redesigned app and gives fresh critical feedback.
+✅ **Result:** Your selected element carries concrete browser context into Chat, and the agent implements and verifies a focused improvement.
 
 ---
 
@@ -86,5 +90,6 @@ Re-run the dogfooding skill from Part 1 to validate your new design.
 You've learned how to:
 - Use Plan Mode for complex design tasks
 - Iterate on plans before implementing
+- Compact accumulated context before changing phases when supported
 - Keep instructions updated with changes
-- Re-run dogfooding to validate design changes
+- Comment on a real browser element and verify the implemented fix

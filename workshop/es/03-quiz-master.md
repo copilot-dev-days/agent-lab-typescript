@@ -15,8 +15,11 @@ Define tus propios flujos de trabajo especializados con agentes personalizados, 
 
 1. Nuevo Chat, selecciona *Quiz Master* como agente personalizado
 2. `Actualiza las preguntas para…` o simplemente `Update quiz`
-3. Revisa el prompt en `.github/agents/quiz-master.agent.md`
-4. Opcional: Follow-up para pedir más creatividad, caos, engagement
+3. Revisa el prompt y el frontmatter `handoffs` en `.github/agents/quiz-master.agent.md`
+4. Revisa las preguntas generadas y selecciona **Polish this quiz theme**. Como el handoff usa `send: false`, inspecciona o edita el prompt prellenado antes de aprobarlo y enviarlo a *Pixel Jam*.
+5. Revisa la integración visual enfocada que Pixel Jam hace del nuevo tema y su verificación en el navegador.
+
+> ⏱️ **Ejercicio de handoff (2 minutos):** Este es un handoff aprobado por una persona: el contexto de la conversación pasa a otro especialista, pero ese especialista espera a que envíes el prompt. En la Parte 4, el orquestador TDD invoca Red, Green y Refactor como subagentes autónomos sin aprobación entre fases.
 
 **Ideas de Temas:**
 
@@ -38,7 +41,7 @@ Define tus propios flujos de trabajo especializados con agentes personalizados, 
 - Mystery Bingo: Adivina quién tiene un rasgo y verifica
 - Chaos Bingo: Prompts sorprendentes, absurdos e impredecibles
 
-✅ **Resultado:** El agente personalizado recorre el quiz actualizado, generando nuevas preguntas creativas y atractivas.
+✅ **Resultado:** Quiz Master crea preguntas temáticas atractivas y un handoff aprobado permite que Pixel Jam integre visualmente ese tema específico.
 
 ---
 
@@ -47,4 +50,5 @@ Define tus propios flujos de trabajo especializados con agentes personalizados, 
 Aprendiste cómo:
 - Usar agentes personalizados para flujos de trabajo especializados
 - Generar preguntas de quiz temáticas
-- Iterar en la salida del agente para mejores resultados
+- Revisar y activar un handoff enfocado entre agentes personalizados
+- Distinguir handoffs aprobados por personas de la orquestación autónoma de subagentes

@@ -1,7 +1,7 @@
 ---
 name: TDD Refactor
 description: Refactor code while maintaining passing tests
-tools: ['search', 'edit', 'execute/runTests']
+tools: ['read', 'search', 'edit', 'execute/runTests']
 disable-model-invocation: true
 user-invocable: false
 ---

@@ -6,13 +6,14 @@
 
 ## Task 1: Agent Hooks — Test Gate
 
-[Agent hooks](https://code.visualstudio.com/docs/copilot/customization/hooks) execute shell commands at key lifecycle points during agent sessions. We'll add a workspace-scoped **Stop hook** that gates *every* agent — no agent can finish until all tests pass.
+[Agent hooks](https://code.visualstudio.com/docs/agent-customization/hooks) execute shell commands at key lifecycle points during agent sessions. Hooks are Preview and can be disabled by your organization's `ChatHooks` policy. We'll activate a workspace-scoped **Stop hook** that gates *every* agent — no agent can finish until all tests pass.
 
 **Steps:**
 
-1. Open the `.github/hooks/` folder
-2. Prompt: *Add an agent hook that runs the tests and blocks the agent from finishing if any test fails*
-3. The hook should be a JSON file in `.github/hooks/` (e.g. `stop-test-gate.json`), not inside any single agent file.
+1. Confirm `npm test` passes, then open `.github/hooks/`
+2. Review the cross-platform `test-gate.sh`, `test-gate.ps1`, and inactive `test-gate.json.example` files
+3. Prompt: *Activate the workspace Stop hook by copying the safe template to `.github/hooks/test-gate.json`. Keep the Bash default and Windows PowerShell override.*
+4. Review the JSON before accepting it. If hooks are disabled by policy, continue the TDD exercise and run tests manually.
 
 ✅ **Result:** Every agent now has a safety net — it will keep working until all tests pass before handing back control.
 
@@ -21,6 +22,8 @@
 ## Task 2: New Bingo Pattern (TDD-Driven)
 
 Use the TDD agent to add a "Four Corners" bingo pattern. The workspace stop hook you set up will enforce test discipline — every agent must leave tests passing before it hands back control.
+
+Unlike the reviewed handoff in Part 3, the TDD agent's `agents` list lets it invoke Red, Green, and Refactor autonomously as subagents.
 
 **Steps:**
 
@@ -50,6 +53,8 @@ Inspect what happened under the hood — did the hook fire? How did agents commu
 4. **Agent Flow Chart:** visualize the TDD → Red → Green → Refactor orchestration
 5. **Summary view:** review total tool calls and token usage
 
+The workspace enables debug logs for Local and Agent Host sessions. Logs can contain prompts, context, and tool details, so disable file logging after the exercise on sensitive projects.
+
 **Bonus:** Click the ✨ sparkle icon to attach debug events to a new chat, then ask: `/troubleshoot did the Stop hook fire during the TDD cycle?`
 
 ✅ **Result:** Full observability into multi-agent orchestration and hook execution.
@@ -76,12 +81,14 @@ Break down agent workflows into specific focus areas, like design-first.
 
 Combine MCP, custom workflows, and subagent isolation in an agent for powerful workflows. Focus on different aspects, like usability, a11y, compliance.
 
+> 🔒 **Least-privilege option:** [GitHub MCP configuration](https://github.com/github/github-mcp-server/blob/main/docs/server-configuration.md) can limit loaded toolsets or enable read-only mode. This lab keeps writes available because the bonus files and assigns issues; for a read-only review, enable read-only mode and skip that bonus. Lockdown mode is best-effort content filtering, not a security boundary.
+
 **Steps:**
 
-1. New chat with agent: `Pixel Jam`: *Run review*
+1. New chat with agent: `UI Review`: *Start*
 2. Keep the app open in VS Code browser preview while the review runs
 3. Follow along as it reviews
-   - Aside: Open `.github/agents/pixel-jam.agent.md` to review the prompt
+   - Aside: Open `.github/agents/ui-review.agent.md` to review the agent definition
 4. Behold a mighty in-depth review
 
 **Bonus:**
@@ -92,7 +99,7 @@ Combine MCP, custom workflows, and subagent isolation in an agent for powerful w
 
 ## Bonus: Keep Going
 
-- Fix UX review problems, delegated to background or cloud agent
+- Fix selected UX review problems in a separate Local session
 - Add ability to have multiple question themes to pick from
 - Add social sharing to win state
 - Make a real iOS or full-stack app?
@@ -112,5 +119,7 @@ You've learned how to:
 ### Keep Going
 
 - 📺 [VS Code on YouTube](https://www.youtube.com/code)
-- 📖 [VS Code Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+- 📖 [VS Code agents documentation](https://code.visualstudio.com/docs/agents/overview)
 - 🌟 [Awesome Copilot](https://github.com/github/awesome-copilot)
+
+👉 **[Continue to Part 5: Completion & Next Steps →](05-complete.md)**

@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "bash .github/hooks/test-gate.sh",
+        "windows": "powershell -NoProfile -File .github\\hooks\\test-gate.ps1",
+        "timeout": 120
+      }
+    ]
+  }
+}

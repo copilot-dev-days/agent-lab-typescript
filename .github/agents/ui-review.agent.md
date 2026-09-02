@@ -1,7 +1,6 @@
 ---
 name: UI Review
 argument-hint: Optional review area to focus on (or just "start")
-model: Claude Haiku 4.5 (copilot)
 tools: [read, agent, browser, search, web, 'github/*', todo]
 ---
 
