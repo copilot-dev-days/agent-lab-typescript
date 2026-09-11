@@ -1,6 +1,7 @@
 ---
 name: setup
 description: Prepare this repository for local development. Use when starting the lab or when the workspace needs dependencies, validation, a running development server, and a browser preview.
+user-invocable: true
 ---
 
 # Set up the workspace
