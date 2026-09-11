@@ -13,28 +13,32 @@ Nesta seção, você vai configurar seu ambiente de desenvolvimento e ensinar o 
 
 ## 🔧 Configuração Inicial
 
-### Passo 1: Crie Seu Repositório (Obrigatório)
+### Passo 1: Crie Seu Repositório
 
-1. Abra [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript)
-2. Clique em **Use this template** → **Create a new repository**
-   - Nome: `my-bingo-mixer`
-   - Visibilidade: **Public**
-3. ✅ Seu próprio repo do Bingo Mixer está pronto!
+Abra [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript), clique em **Use this template** → **Create a new repository** e use o nome `my-bingo-mixer`.
 
-### Passo 2: Habilite o GitHub Pages
+Use visibilidade **Public** se quiser publicar o aplicativo com o GitHub Pages.
+
+✅ Seu próprio repo do Bingo Mixer está pronto!
+
+### Passo 2: Habilite o GitHub Pages (Opcional)
+
+Habilite o Pages se quiser testar e compartilhar seu aplicativo ao vivo:
 
 1. Vá em **Settings** → **Pages** do seu repo
 2. Em "Build and deployment", mude *Deploy from a branch* para **GitHub Actions**
-3. ✅ Qualquer commit agora vai publicar em: `https://{username}.github.io/{repo-name}`
+3. ✅ Pushes para `main` publicarão em: `https://{username}.github.io/{repo-name}`
 
 ### Passo 3: Escolha Como Vai Desenvolver
 
-#### Opção A: Clone localmente no VS Code
+#### Opção A (Recomendada): Clone localmente no VS Code
 
 1. Abra o VS Code
-2. Execute o comando: `Git: Clone` → `Clone from GitHub`
-3. Selecione seu novo repositório
-4. Instale as extensões recomendadas (notificação ou `Extensions: Show Recommended Extensions`)
+2. Abra a Paleta de Comandos (`Ctrl+Shift+P` no Windows/Linux ou `Cmd+Shift+P` no macOS)
+3. Execute **Git: Clone** → **Clone from GitHub**
+4. Selecione seu novo repositório e escolha uma pasta local
+5. Abra o repositório clonado quando solicitado
+6. Instale as extensões recomendadas (notificação ou `Extensions: Show Recommended Extensions`)
 
 #### Opção B: Crie um Codespace para seu repo
 

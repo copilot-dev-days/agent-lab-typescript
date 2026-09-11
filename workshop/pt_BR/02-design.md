@@ -11,13 +11,19 @@ Agora que engenheiramos o contexto do repo, vamos ser criativos.
 
 ### Tarefa 1: Deixe a Sua Cara
 
-Plan mode para começar qualquer trabalho maior — itere no plano (2+ vezes!) com ajustes e esclarecimentos.
+Comece trabalhos maiores no Plan mode. O Copilot vai inspecionar o aplicativo atual e suas instruções de frontend e Tailwind e, em seguida, propor um plano de redesign sem alterar o código. Use essa conversa de planejamento para definir a direção visual, preservar o comportamento do jogo e combinar como o resultado será validado.
 
 **Passos:**
 
 1. Mude para Plan mode
-2. *Vamos fazer um redesign completo. Faça algo…*
-3. Revise o plano e comece a Implementação
+2. Prompt: *"Vamos fazer um redesign completo. Faça algo…"* e conclua com uma ideia de tema abaixo ou sua própria direção
+3. Revise a experiência proposta, as áreas afetadas e a abordagem de validação
+4. Itere no plano pelo menos duas vezes com ajustes e esclarecimentos concretos; o Copilot vai revisá-lo sem implementar ainda
+5. Quando o plano estiver pronto, escolha:
+   - **Start with Autopilot (recomendado):** deixe o Copilot implementar e validar o plano de forma autônoma
+   - **Start Implementation:** inicie a implementação com o fluxo de aprovação padrão
+   - **Open in Editor:** edite ou salve o plano antes da implementação
+6. Revise o aplicativo em execução e a validação do agente antes de aceitar as alterações
 
 **Ideias de Temas:**
 

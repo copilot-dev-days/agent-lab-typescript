@@ -10,13 +10,19 @@ Now that we've engineered the repo context, let's get creative.
 
 ### Task 1: Make It Yours
 
-Plan mode to start off any bigger work items — iterate on the plan (2+ times!) with tweaks and clarifications.
+Start larger work in Plan mode. Copilot will inspect the current app and its frontend and Tailwind instructions, then propose a redesign plan without changing code. Use this planning conversation to shape the visual direction, preserve game behavior, and agree on how the result will be validated.
 
 **Steps:**
 
 1. Switch to Plan mode
-2. *Lets do a full redesign. Make it …*
-3. Review plan and start Implement
+2. Prompt: *"Let's do a full redesign. Make it …"* and finish with a theme idea below or your own direction
+3. Review the proposed experience, affected areas, and validation approach
+4. Iterate on the plan at least twice with concrete tweaks and clarifications; Copilot will revise it without implementing yet
+5. When the plan is ready, choose:
+   - **Start with Autopilot (preferred):** let Copilot implement and validate the plan autonomously
+   - **Start Implementation:** begin the implementation with the standard approval flow
+   - **Open in Editor:** edit or save the plan before implementation
+6. Review the running app and the agent's validation before accepting the changes
 
 **Theme Ideas:**
 

@@ -12,28 +12,32 @@ In this section, you'll set up your development environment and teach GitHub Cop
 
 ## 🔧 Initial Setup
 
-### Step 1: Create Your Repository (Required)
+### Step 1: Create Your Repository
 
-1. Open [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript)
-2. Click **Use this template** → **Create a new repository**
-   - Name: `my-bingo-mixer`
-   - Visibility: **Public**
-3. ✅ Your own Bingo Mixer repo is ready!
+Open [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript), click **Use this template** → **Create a new repository**, and name it `my-bingo-mixer`.
 
-### Step 2: Enable GitHub Pages
+Use **Public** visibility if you want to publish the app with GitHub Pages.
+
+✅ Your own Bingo Mixer repo is ready!
+
+### Step 2: Enable GitHub Pages (Optional)
+
+Enable Pages if you want to test and share your app live:
 
 1. Go to your repo's **Settings** → **Pages**
 2. Under "Build and deployment", change *Deploy from a branch* to **GitHub Actions**
-3. ✅ Any commit will now publish to: `https://{username}.github.io/{repo-name}`
+3. ✅ Pushes to `main` will publish to: `https://{username}.github.io/{repo-name}`
 
 ### Step 3: Choose How You'll Develop
 
-#### Option A: Clone locally in VS Code
+#### Option A (Preferred): Clone locally in VS Code
 
 1. Open VS Code
-2. Run command: `Git: Clone` → `Clone from GitHub`
-3. Select your new repository
-4. Install recommended extensions (notification or `Extensions: Show Recommended Extensions`)
+2. Open the Command Palette (`Ctrl+Shift+P` on Windows/Linux or `Cmd+Shift+P` on macOS)
+3. Run **Git: Clone** → **Clone from GitHub**
+4. Select your new repository and choose a local folder
+5. Open the cloned repository when prompted
+6. Install recommended extensions (notification or `Extensions: Show Recommended Extensions`)
 
 #### Option B: Create a Codespace for your repo
 
