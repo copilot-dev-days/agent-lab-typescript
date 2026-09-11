@@ -9,6 +9,7 @@
   "github.copilot.chat.githubMcpServer.toolsets": [
     "default"
   ],
+  "chat.editor.preferCopilotHarness": false,
   "workbench.browser.enableChatTools": true,
   "chat.agentHost.agentDebugLog.enabled": true,
   "github.copilot.chat.agentDebugLog.enabled": true,
