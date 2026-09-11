@@ -14,10 +14,7 @@ In this section, you'll set up your development environment and teach GitHub Cop
 
 ### Step 1: Create Your Repository
 
-Open [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript), then choose one:
-
-- **Recommended:** Click **Use this template** → **Create a new repository** and name it `my-bingo-mixer`.
-- **Optional alternative:** Click **Fork** → **Create a new fork** to work from a fork in your account.
+Open [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript), click **Use this template** → **Create a new repository**, and name it `my-bingo-mixer`.
 
 Use **Public** visibility if you want to publish the app with GitHub Pages.
 

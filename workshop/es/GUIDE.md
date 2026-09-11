@@ -33,7 +33,7 @@
 ## 🚀 Configuración Rápida
 
 ```
-# 1. Crea un repo desde la plantilla o, si lo prefieres, haz un fork
+# 1. Crea un repo desde la plantilla
 # 2. Aplicación en vivo opcional: Settings > Pages > GitHub Actions
 # 3. Recomendado: paleta de comandos > Git: Clone > Clone from GitHub
 #    Alternativa: crea un Codespace desde tu repo

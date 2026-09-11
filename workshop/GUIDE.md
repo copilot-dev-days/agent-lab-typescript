@@ -32,7 +32,7 @@
 ## 🚀 Quick Setup
 
 ```
-# 1. Create a repo from the template, or optionally fork it
+# 1. Create a repo from the template
 # 2. Optional live app: Settings > Pages > GitHub Actions
 # 3. Preferred: Command Palette > Git: Clone > Clone from GitHub
 #    Alternative: create a Codespace from your repo

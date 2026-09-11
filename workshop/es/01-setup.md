@@ -15,10 +15,7 @@ En esta sección, configurarás tu entorno de desarrollo y le enseñarás a GitH
 
 ### Paso 1: Crea Tu Repositorio
 
-Abre [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript) y elige una opción:
-
-- **Recomendada:** Haz clic en **Use this template** → **Create a new repository** y llámalo `my-bingo-mixer`.
-- **Alternativa opcional:** Haz clic en **Fork** → **Create a new fork** para trabajar desde un fork en tu cuenta.
+Abre [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript), haz clic en **Use this template** → **Create a new repository** y llámalo `my-bingo-mixer`.
 
 Usa visibilidad **Public** si quieres publicar la aplicación con GitHub Pages.
 

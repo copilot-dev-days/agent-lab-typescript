@@ -33,7 +33,7 @@
 ## 🚀 Configuração Rápida
 
 ```
-# 1. Crie um repo a partir do template ou, opcionalmente, faça um fork
+# 1. Crie um repo a partir do template
 # 2. Aplicativo ao vivo opcional: Settings > Pages > GitHub Actions
 # 3. Recomendado: Paleta de Comandos > Git: Clone > Clone from GitHub
 #    Alternativa: crie um Codespace a partir do seu repo
