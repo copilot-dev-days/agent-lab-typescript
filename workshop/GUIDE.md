@@ -32,9 +32,10 @@
 ## 🚀 Quick Setup
 
 ```
-# 1. Create repo from template: github.com/copilot-dev-days/agent-lab-typescript
-# 2. Enable Pages: Settings > Pages > GitHub Actions
-# 3. Choose one: clone repo in VS Code OR create a Codespace from your repo
+# 1. Create a repo from the template, or optionally fork it
+# 2. Optional live app: Settings > Pages > GitHub Actions
+# 3. Preferred: Command Palette > Git: Clone > Clone from GitHub
+#    Alternative: create a Codespace from your repo
 # Open a Local chat with Default Approvals, then run:
 # /setup
 ```
@@ -51,7 +52,8 @@
 - [ ] Tour repo customizations
 
 ### Part 2: Design-First Frontend
-- [ ] Full UI redesign (Plan Mode)
+- [ ] Plan and iterate on a full UI redesign
+- [ ] Start with Autopilot (preferred), Start Implementation, or Open in Editor
 - [ ] Compact design context when supported
 - [ ] Review generated design instructions
 - [ ] Comment on one browser element and verify the fix

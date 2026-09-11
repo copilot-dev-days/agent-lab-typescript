@@ -13,28 +13,35 @@ En esta sección, configurarás tu entorno de desarrollo y le enseñarás a GitH
 
 ## 🔧 Configuración Inicial
 
-### Paso 1: Crea Tu Repositorio (Obligatorio)
+### Paso 1: Crea Tu Repositorio
 
-1. Abre [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript)
-2. Haz clic en **Use this template** → **Create a new repository**
-   - Nombre: `my-bingo-mixer`
-   - Visibilidad: **Public**
-3. ✅ ¡Tu propio repo de Bingo Mixer está listo!
+Abre [github.com/copilot-dev-days/agent-lab-typescript](https://github.com/copilot-dev-days/agent-lab-typescript) y elige una opción:
 
-### Paso 2: Habilita GitHub Pages
+- **Recomendada:** Haz clic en **Use this template** → **Create a new repository** y llámalo `my-bingo-mixer`.
+- **Alternativa opcional:** Haz clic en **Fork** → **Create a new fork** para trabajar desde un fork en tu cuenta.
+
+Usa visibilidad **Public** si quieres publicar la aplicación con GitHub Pages.
+
+✅ ¡Tu propio repo de Bingo Mixer está listo!
+
+### Paso 2: Habilita GitHub Pages (Opcional)
+
+Habilita Pages si quieres probar y compartir tu aplicación en vivo:
 
 1. Ve a **Settings** → **Pages** de tu repo
 2. En "Build and deployment", cambia *Deploy from a branch* a **GitHub Actions**
-3. ✅ Cualquier commit ahora publicará en: `https://{username}.github.io/{repo-name}`
+3. ✅ Los pushes a `main` publicarán en: `https://{username}.github.io/{repo-name}`
 
 ### Paso 3: Elige Cómo Vas a Desarrollar
 
-#### Opción A: Clona localmente en VS Code
+#### Opción A (Recomendada): Clona localmente en VS Code
 
 1. Abre VS Code
-2. Ejecuta el comando: `Git: Clone` → `Clone from GitHub`
-3. Selecciona tu nuevo repositorio
-4. Instala las extensiones recomendadas (notificación o `Extensions: Show Recommended Extensions`)
+2. Abre la paleta de comandos (`Ctrl+Shift+P` en Windows/Linux o `Cmd+Shift+P` en macOS)
+3. Ejecuta **Git: Clone** → **Clone from GitHub**
+4. Selecciona tu nuevo repositorio y elige una carpeta local
+5. Abre el repositorio clonado cuando se te solicite
+6. Instala las extensiones recomendadas (notificación o `Extensions: Show Recommended Extensions`)
 
 #### Opción B: Crea un Codespace para tu repo
 

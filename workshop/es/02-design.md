@@ -11,13 +11,19 @@ Ahora que hemos trabajado la ingeniería de contexto del repo, vamos a ponernos 
 
 ### Tarea 1: Hazlo Tuyo
 
-Plan mode para comenzar cualquier trabajo grande — itera en el plan (¡2+ veces!) con ajustes y aclaraciones.
+Comienza los trabajos grandes en Plan mode. Copilot inspeccionará la aplicación actual y sus instrucciones de frontend y Tailwind, y luego propondrá un plan de rediseño sin cambiar el código. Usa esta conversación de planificación para definir la dirección visual, preservar el comportamiento del juego y acordar cómo se validará el resultado.
 
 **Pasos:**
 
 1. Cambia a Plan mode
-2. *Hagamos un rediseño completo. Hazlo…*
-3. Revisa el plan y comienza a Implementar
+2. Prompt: *"Hagamos un rediseño completo. Hazlo…"* y termina con una idea de tema de la lista siguiente o tu propia dirección
+3. Revisa la experiencia propuesta, las áreas afectadas y el enfoque de validación
+4. Itera en el plan al menos dos veces con ajustes y aclaraciones concretos; Copilot lo revisará sin implementarlo todavía
+5. Cuando el plan esté listo, elige:
+   - **Start with Autopilot (recomendado):** deja que Copilot implemente y valide el plan de forma autónoma
+   - **Start Implementation:** comienza la implementación con el flujo de aprobación estándar
+   - **Open in Editor:** edita o guarda el plan antes de implementarlo
+6. Revisa la aplicación en ejecución y la validación del agente antes de aceptar los cambios
 
 **Ideas de Temas:**
 
